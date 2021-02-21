@@ -107,6 +107,13 @@ TFile filin("ntuplaD0.root");
 	TH1F *hPypion = new TH1F("hPypion", " Py pion", 200, -5., 5.);
 	TH1F *hPzpion = new TH1F("hPzpion", " Pz pion", 200, -5., 5.);
 	TH1F *htheta = new TH1F("htheta", " Angle between the particles", 200, 0., 7.);
+	TH2F *hResPxVsYKaonRel = new TH2F("hResPxVsYKaonRel", "Res Px vs Y Rel Kaon", 200, -5., 5., 36, 0, 6);
+	TH2F *hResPxVsYpionRel = new TH2F("hResPxVsYpionRel", "Res Px vs Y Rel Pion", 200, -5., 5., 36, 0, 6);
+	TH2F *hResPyVsYKaonRel = new TH2F("hResPyVsYKaonRel", "Res Py vs Y Rel Kaon", 200, -5., 5., 36, 0, 6);
+	TH2F *hResPyVsYpionRel = new TH2F("hResPyVsYpionRel", "Res Py vs Y Rel Pion", 200, -5., 5., 36, 0, 6);
+	TH2F *hResPzVsYKaonRel = new TH2F("hResPzVsYKaonRel", "Res Pz vs Y Rel Kaon", 200, -5., 5., 36, 0, 6);
+	TH2F *hResPzVsYpionRel = new TH2F("hResPzVsYpionRel", "Res Pz vs Y Rel Pion", 200, -5., 5., 36, 0, 6);
+
 	for(int i=0 ; i<events; i++) {
 		variables->GetEvent(i);
 		double residVx=10000.*(xrec - secvertgenKaon[0]);
@@ -125,6 +132,14 @@ TFile filin("ntuplaD0.root");
 		hResPyVsYpion->Fill(pResPion[1],y);
 		hResPzVsYKaon->Fill(pResKaon[2],y);
 		hResPzVsYpion->Fill(pResPion[2],y);
+
+		hResPxVsYKaonRel->Fill(pResKaon[0]/PrecKaon[0],y);
+		hResPxVsYpionRel->Fill(pResPion[0]/PrecPion[0],y);
+		hResPyVsYKaonRel->Fill(pResKaon[1]/PrecKaon[1],y);
+		hResPyVsYpionRel->Fill(pResPion[1]/PrecPion[1],y);
+		hResPzVsYKaonRel->Fill(pResKaon[2]/PrecKaon[2],y);
+		hResPzVsYpionRel->Fill(pResPion[2]/PrecPion[2],y);
+
 		hPxKaon->Fill(PrecKaon[0]);
 		hPyKaon->Fill(PrecKaon[1]);
 		hPzKaon->Fill(PrecKaon[2]);
@@ -136,14 +151,23 @@ TFile filin("ntuplaD0.root");
 	foutD0->cd();
 	hMassinrecY->Write();
 	hResVxVsY->Write();
-  hResVyVsY->Write();
-  hResVzVsY->Write();
+  	hResVyVsY->Write();
+  	hResVzVsY->Write();
+
 	hResPxVsYKaon->Write();
 	hResPxVsYpion->Write();
 	hResPyVsYKaon->Write();
 	hResPyVsYpion->Write();
 	hResPzVsYKaon->Write();
 	hResPzVsYpion->Write();
+
+	hResPxVsYKaonRel->Write();
+	hResPxVsYpionRel->Write();
+	hResPyVsYKaonRel->Write();
+	hResPyVsYpionRel->Write();
+	hResPzVsYKaonRel->Write();
+	hResPzVsYpionRel->Write();
+
 	hPxKaon->Write();
 	hPyKaon->Write();
 	hPzKaon->Write();
@@ -186,6 +210,19 @@ TFile filin("ntuplaD0.root");
 	ProjectionforBin(hResPyVsYpion, "D_{0} ResPy vs Y", "Y", c6p, foutD0);
 	TCanvas* c7p=new TCanvas("c7p");
 	ProjectionforBin(hResPzVsYpion, "D_{0} ResPz vs Y", "Y", c7p, foutD0);
+
+	TCanvas* c2pRel=new TCanvas("c2pRel");
+	ProjectionforBin(hResPxVsYKaonRel ,"#D_{0} ResPx vs Y", "Y", c2pRel, foutD0);
+	TCanvas* c3pRel=new TCanvas("c3pRel");
+	ProjectionforBin(hResPyVsYKaonRel, "#D_{0} ResPy vs Y", "Y", c3pRel, foutD0);
+	TCanvas* c4pRel=new TCanvas("c4pRel");
+	ProjectionforBin(hResPzVsYKaonRel, "#D_{0} ResPz vs Y", "Y", c4pRel, foutD0);
+	TCanvas* c5pRel=new TCanvas("c5pRel");
+	ProjectionforBin(hResPxVsYpionRel, "D_{0} ResPx vs Y", "Y", c5pRel, foutD0);
+	TCanvas* c6pRel=new TCanvas("c6pRel");
+	ProjectionforBin(hResPyVsYpionRel, "D_{0} ResPy vs Y", "Y", c6pRel, foutD0);
+	TCanvas* c7pRel=new TCanvas("c7pRel");
+	ProjectionforBin(hResPzVsYpionRel, "D_{0} ResPz vs Y", "Y", c7pRel, foutD0);
 	
 	
 

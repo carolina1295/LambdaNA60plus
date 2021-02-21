@@ -129,8 +129,9 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   det->ReadSetup(setup, setup);
   det->InitBkg(Eint); //check modificare bkg su altro file
   det->ForceLastActiveLayer(det->GetLastActiveLayerITS()); // will not propagate beyond VT
-
-  det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
+	det->SetMinITSHits(7);
+  //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
+	//printf("num its HITS MIN MACRO %d", (det->GetNumberOfActiveLayersITS()));
   //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()-1); //NA60
   det->SetMinMSHits(0); //NA60+
   //det->SetMinMSHits(det->GetNumberOfActiveLayersMS()-1); //NA60
@@ -208,6 +209,9 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 	TH3F* hYPtLzGen=new TH3F("hYPtLzGen", "Y-Pt-Lz corr match Gen", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
 	TH3F* hYPtLzRec=new TH3F("hYPtLzRec", "Y-Pt-Lz corr match Rec", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
 	TH3F* hYPtLzMC=new TH3F("hYPtLzMC", "Y-Pt-Lz corr match MC", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
+	TH3F* hYPtLzGen0fake=new TH3F("hYPtLzGen0fake", "Y-Pt-Lz corr match Gen 0 fake", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
+	TH3F* hYPtLzRec0fake=new TH3F("hYPtLzRec0fake", "Y-Pt-Lz corr match Rec 0 fake", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
+
 	TH2F* hYPtGen = new TH2F("hYPtGen", "Y-Pt corr match", 80, 1.0, 5.4, 40, ptminSG, ptmaxSG);
 	TH1D* hPtGen = new TH1D("hPtGen", "Pt gen", 40, ptminSG, ptmaxSG);
 	TH1D* hYGen = new TH1D("hYGen", "Y full phase space", 80., -3.0, 7.0);
@@ -287,6 +291,10 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 	TH1D* hMassreconstr = new TH1D("hMassreconstr", "Mass", 3000, 0,3);
 	TH2F* hMassinrecVsNfake = new TH2F("hMassinrecVsNfake", "Nfake vs Mass", 6, -0.5 , 5.5,3000, 0,3);
 	TH2F* hMassinrecVszP = new TH2F("hMassinrecVszP", "Mass vs zP", 500, 0, 50,3000, 0,3);
+
+	//check number of hits for layer
+	TH1D* hNITSHitsprot = new TH1D("hNITSHitsprot","N of hits ITS proton",11,-0.5,10.5);
+	TH1D* hNITSHitspion = new TH1D("hNITSHitspion","N of hits ITS pion",11,-0.5,10.5);	
   
 	TH2F *hd0 = new TH2F("hd0", "", 100, 0, 0.1, 30, 0, 3);
   THnSparseF *hsp = CreateSparse();
@@ -318,9 +326,6 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 			nfaketrkpion = 0;
 		double pxyz[3]={0}, pProtRec[3]={0}, pPionRec[3]={0}, pProtGen[3]={0}, pPionGen[3]={0};
 		double y = 0, chi2prot=0, chi2ITSprot=0, chi2pion=0, chi2ITSpion=0;
-			
-			//printf("prot %d \n", okProt );
-			//printf("pion %d \n", okPion );
 
 		if (simulateBg && (iev%refreshBg)==0) det->GenBgEvent(0.,0.,0.);//bkg c'è sempre
 		Double_t ptGenD = hLambdapt->GetRandom(); // get Lambda distribution from file
@@ -393,8 +398,8 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 				TLorentzVector *pDecDau = new TLorentzVector(0., 0., 0., 0.);//quadrimpulso figli
 				pDecDau->SetXYZM(iparticle1->Px(), iparticle1->Py(), iparticle1->Pz(), iparticle1->GetMass());
 				if(kf==2212){
-				hYPtLzMC->Fill(yGenD,ptGenD,iparticle1->Vz());}
-				//printf("pdg code= %d \n",kf);
+					hYPtLzMC->Fill(yGenD,ptGenD,iparticle1->Vz());
+				}
 				Int_t crg=1;
 				if(iparticle1->GetPdgCode()<0) crg=-1;
 				KMCProbeFwd *trw=NULL;
@@ -404,6 +409,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 				}
 				else{
 					trw = det->GetLayer(0)->GetWinnerMCTrack();
+					
 					if (!trw) {
 						okProt=kFALSE;
 						okPion=kFALSE;
@@ -417,9 +423,9 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 							nrec++;
 							nfake += trw->GetNFakeITSHits();
 							trw->GetPXYZ(pxyz);
-
+							//printf("_____numhits %d \n",trw->GetNITSHits());
+							//printf("getInnerLayerCheck %d \n",trw->GetInnerLayerChecked());
 						}
-
 					}
 				}
 
@@ -543,6 +549,11 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 		
 		if (nrec >= 2 && okProt==kTRUE && okPion==kTRUE){ 
 			countrec++;
+			//printf("numhits CERTO 0 %d \n",recProbe[0].GetNITSHits());
+			//printf("numhits CERTO 1 %d \n",recProbe[1].GetNITSHits());
+
+			hNITSHitsprot->Fill(recProbe[0].GetNITSHits());
+			hNITSHitspion->Fill(recProbe[1].GetNITSHits());
 
 			hResPyVsYprotcorr->Fill(y,PyCorrectProt);
 			hResPyVsYpioncorr->Fill(y,PyCorrectPion);
@@ -626,6 +637,11 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 			
 			hYPtLzGen->Fill(yGenD,ptGenD,secvertgenK[2]);
 			hYPtLzRec->Fill(yRecD,ptRecD,zP);
+
+			if(nfaketrkprot==0 && nfaketrkpion==0){
+				hYPtLzGen0fake->Fill(yGenD,ptGenD,secvertgenK[2]);
+				hYPtLzRec0fake->Fill(yRecD,ptRecD,zP);
+			}
 			
 			
 			hYPtRecoAll->Fill(yRecD, ptRecD);
@@ -778,12 +794,22 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 
 
   fout->cd();
+
+	hNITSHitsprot->Write();
+	hNITSHitspion->Write();
+
+	//efficiency
 	hYPtLzMC->Write();
 	hYPtLzGen->Write();
 	hYPtLzRec->Write();
+	hYPtLzGen0fake->Write();
+	hYPtLzRec0fake->Write();
+
+	//invariant mass
 	hMassinrecVszP->Write();
 	hMassinrecVsNfake->Write();
 	hMassreconstr->Write();
+
 	//histograms for checking reconstruction (con il tracciatore)
 	hResPyVsLzprotcorr->Write();
 	hResPyVsLzpioncorr->Write();
@@ -793,7 +819,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 	hnfakeVsLzprot->Write();
 	hResPyVsnfakeprot->Write();
 
-	
+
 	//histograms for checking simulation (senza il tracciatore)
 	/*gr1->Write();
 	gr->Write();*/

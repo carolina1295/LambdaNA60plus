@@ -38,11 +38,11 @@ void efficiency(TH1F* hRec, TH1F* hMC, TH1F* hGen, char* xaxis, TFile *f);
 
 void PlotLambdaSum(){
 
-	TFile *hLambda=new TFile("Lambdastand-Signal-histos.root");
-	TFile *hLambdaBar=new TFile("LambdaBarstand-Signal-histos.root");
+	TFile *hLambda=new TFile("LambdaMoreLayer-Signal-histos.root");
+	TFile *hLambdaBar=new TFile("LambdaBarMoreLayer-Signal-histos.root");
 	TFile *hD0=new TFile("histogramD0.root");
 	TFile *hPion=new TFile("PION-Signal-histos.root");
-	TFile *hPionpos=new TFile("PION+pos-Signal-histos.root");
+	TFile *hPionpos=new TFile("PIONpos-Signal-histos.root");
 	TFile *hProt=new TFile("PROTON-Signal-histos.root");
 	TFile *hAntiProt=new TFile("AntiPROTON-Signal-histos.root");
 
@@ -281,7 +281,7 @@ void PlotLambdaSum(){
 	TH2F *hDeltaLzVsLzgen = new TH2F("hDeltaLzVsLzgen", "#Delta Lz vs Lz gen", 200, 0, 60, 600, -1, 1);
 	//Apertura file di input con variabili lambda per studio performance
 	//Lettura Ntupla 
- 	TFile filin("ntuplastand.root");
+ 	TFile filin("ntuplaMoreLayer.root");
   	float nfaketrkprot, nfaketrkpion,y,xrec,yrec,zrec,secvertgenProt[3],massinvrec,pGenProt[3],pGenPion[3],dca,pRecProt[3],pRecPion[3],chi2prot,chi2ITSprot,chi2pion,chi2ITSpion,massinvSwitch,pGenLambda[3];
   	TNtuple *variables = (TNtuple*)filin.Get("nt");
 		variables->SetBranchAddress("nfaketrkprot",&nfaketrkprot);
@@ -338,9 +338,8 @@ void PlotLambdaSum(){
 		hNfakePionVsChi2->Fill(nfaketrkpion,chi2pion);
 
 		htheta->Fill(theta);
-
-		hLzrecVsLzgen->Fill(secvertgenProt[2],zrec);
-		hDeltaLzVsLzgen->Fill(secvertgenProt[2],zrec-secvertgenProt[2]);
+			//hLzrecVsLzgen->Fill(secvertgenProt[2],zrec);
+			//hDeltaLzVsLzgen->Fill(secvertgenProt[2],zrec-secvertgenProt[2]);
 		
 		if(nfaketrkprot == 0 && nfaketrkpion == 0) {
 			hMassinrecY0fake->Fill(massinvrec, y);
@@ -380,6 +379,9 @@ void PlotLambdaSum(){
 			hResVxVsLz->Fill(residVx, zrec);
 			hResVyVsLz->Fill(residVy, zrec);
 			hResVzVsLz->Fill(residVz, zrec);
+
+			hLzrecVsLzgen->Fill(secvertgenProt[2],zrec);
+			hDeltaLzVsLzgen->Fill(secvertgenProt[2],zrec-secvertgenProt[2]);
 		}
 		if(nfaketrkprot == 0) {
 			hMassinrecnfakeprot0->Fill(massinvrec);
@@ -412,7 +414,7 @@ void PlotLambdaSum(){
 	}
 	filin.Close();
 
-	TFile filinBar("ntuplaLambdaBarstand.root");
+	TFile filinBar("ntuplaLambdaBarMoreLayer.root");
   	float nfaketrkprotBar, nfaketrkpionBar,yBar,xrecBar,yrecBar,zrecBar,secvertgenProtBar[3],massinvrecBar,pGenProtBar[3],pGenPionBar[3],dcaBar,pRecProtBar[3],pRecPionBar[3],chi2protBar,chi2ITSprotBar,chi2pionBar,chi2ITSpionBar,massinvSwitchBar,pGenLambdaBar[3];
   	TNtuple *variablesBar = (TNtuple*)filinBar.Get("ntLambdaBarstand");
 		variablesBar->SetBranchAddress("nfaketrkprot",&nfaketrkprotBar);
@@ -469,8 +471,9 @@ void PlotLambdaSum(){
 		hNfakeProtVsChi2->Fill(nfaketrkprotBar,chi2protBar);
 		hNfakePionVsChi2->Fill(nfaketrkpionBar,chi2pionBar);
 
-		hLzrecVsLzgen->Fill(secvertgenProtBar[2],zrecBar);
-		hDeltaLzVsLzgen->Fill(secvertgenProtBar[2],zrecBar-secvertgenProtBar[2]);
+		//hLzrecVsLzgen->Fill(secvertgenProtBar[2],zrecBar);
+		//hDeltaLzVsLzgen->Fill(secvertgenProtBar[2],zrecBar-secvertgenProtBar[2]);
+
 		if(nfaketrkprotBar == 0 && nfaketrkpionBar == 0) {
 			hMassinrecY0fake->Fill(massinvrecBar, yBar);
 			hMassinrecSwitchY0fake->Fill(massinvSwitchBar, yBar);
@@ -512,6 +515,8 @@ void PlotLambdaSum(){
 			hResVxVsLz->Fill(residVxBar, zrecBar);
 			hResVyVsLz->Fill(residVyBar, zrecBar);
 			hResVzVsLz->Fill(residVzBar, zrecBar);
+			hLzrecVsLzgen->Fill(secvertgenProtBar[2],zrecBar);
+			hDeltaLzVsLzgen->Fill(secvertgenProtBar[2],zrecBar-secvertgenProtBar[2]);
 
 		}
 		if(nfaketrkprotBar == 0) {
@@ -744,7 +749,8 @@ void PlotLambdaSum(){
 		mgpLD[i]->GetYaxis()->SetTitle("#sigma");
 		mgpLD[i]->Draw("a");
 	}
-/*	TH2F* hResPxPionRel=(TH2F*)hPion->Get("hResPxVsYpionRel");
+	
+	TH2F* hResPxPionRel=(TH2F*)hPion->Get("hResPxVsYpionRel");
 	TH2F* hResPyPionRel=(TH2F*)hPion->Get("hResPyVsYpionRel");
 	TH2F* hResPzPionRel=(TH2F*)hPion->Get("hResPzVsYpionRel");
 
@@ -786,9 +792,9 @@ void PlotLambdaSum(){
 	TCanvas* c6AntiProt=new TCanvas("c6AntiProt");
 	ProjectionforBin(hResPyAntiProtRel, "Antiproton ResPy vs Y relativa", "Y", c6AntiProt, foutLambda);
 	TCanvas* c7AntiProt=new TCanvas("c7AntiProt");
-	ProjectionforBin(hResPzAntiProtRel, "Antiproton ResPz vs Y relativa", "Y", c7AntiProt, foutLambda);*/
+	ProjectionforBin(hResPzAntiProtRel, "Antiproton ResPz vs Y relativa", "Y", c7AntiProt, foutLambda);
 
-	TCanvas* c5piRel=new TCanvas("c5piRel");
+/*	TCanvas* c5piRel=new TCanvas("c5piRel");
 	ProjectionforBin(hResPxVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPx vs Y Rel", "Y", c5piRel, foutLambda);
 	TCanvas* c6piRel=new TCanvas("c6piRel");
 	ProjectionforBin(hResPyVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPy vs Y Rel", "Y", c6piRel, foutLambda);
@@ -802,7 +808,7 @@ void PlotLambdaSum(){
 	TCanvas* c7pRel=new TCanvas("c7pRel");
 	ProjectionforBin(hResPzVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPz vs Y Rel", "Y", c7pRel, foutLambda);
 	
-
+*/
 
 	/*TGraphErrors *pxpionLambda=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} pion ResPx vs Y Rel");
 	TGraphErrors *pypionLambda=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} pion ResPy vs Y Rel");
@@ -820,6 +826,7 @@ void PlotLambdaSum(){
 	TCanvas *deltaPrelX=new TCanvas("deltaPrelX");
 	deltaPrelX->SetGrid();
 	TMultiGraph *mg = new TMultiGraph();
+	mg->SetTitle("Different resolutions on P_{x}; y ; #sigma (#frac{Gev}/{c})");
 	pxpion->SetMarkerColor(1);
 	pxpionpos->SetMarkerColor(2);
 	pxprot->SetMarkerColor(4);
@@ -845,8 +852,8 @@ void PlotLambdaSum(){
 	mg->Add(pxprotLambda,"p");
 	mg->Add(pxpionLambda,"p");
 	
-	mg->GetXaxis()->SetTitle("y");
-	mg->GetYaxis()->SetTitle("#sigma");
+	//mg->GetXaxis()->SetTitle("y");
+	//mg->GetYaxis()->SetTitle("#sigma");
 	mg->Draw("a");
 
 	TCanvas *deltaPrelY=new TCanvas("deltaPrelY");

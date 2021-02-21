@@ -42,6 +42,7 @@ void EfficiencyLambda(){
     //Lambda
     //Distribuzione 3D per efficienza
 	TH3F* hYPtLzMC[3], *hYPtLzGen[3], *hYPtLzRec[3];
+	 TH3F* hYPtLzGen0fakeML, * hYPtLzRec0fakeML ;
 	hYPtLzMC[0]=(TH3F*)hLambda->Get("hYPtLzMC");
 	hYPtLzGen[0]=(TH3F*)hLambda->Get("hYPtLzGen");
 	hYPtLzRec[0]=(TH3F*)hLambda->Get("hYPtLzRec");
@@ -53,6 +54,8 @@ void EfficiencyLambda(){
 	hYPtLzMC[2]=(TH3F*)hLambdaMoreLayer->Get("hYPtLzMC");
 	hYPtLzGen[2]=(TH3F*)hLambdaMoreLayer->Get("hYPtLzGen");
 	hYPtLzRec[2]=(TH3F*)hLambdaMoreLayer->Get("hYPtLzRec");
+	hYPtLzGen0fakeML=(TH3F*)hLambdaMoreLayer->Get("hYPtLzGen0fake;1");
+	hYPtLzRec0fakeML=(TH3F*)hLambdaMoreLayer->Get("hYPtLzRec0fake;1");
 
 	TH1F* hYMC[3],*hYGen[3], *hYRec[3], *hPtMC[3], *hPtGen[3], *hPtRec[3], *hLzMC[3], *hLzGen[3], *hLzRec[3];
 	//efficiency for y
@@ -87,11 +90,22 @@ void EfficiencyLambda(){
 			efficiency(hYRec[i],hYMC[i],hYGen[i],"y #Lambda 10 layers",foutLambda);
 			efficiency(hPtRec[i],hPtMC[i],hPtGen[i],"P_{t} #Lambda 10 layers",foutLambda);
 			efficiency(hLzRec[i],hLzMC[i],hLzGen[i],"Lz #Lambda 10 layers",foutLambda);
+			TH1F* hLzGen0fake, *hLzRec0fake;
+		hLzGen0fake=(TH1F*)hYPtLzGen0fakeML->ProjectionZ();
+		hLzRec0fake=(TH1F*)hYPtLzRec0fakeML->ProjectionZ();
+
+		efficiency(hLzRec0fake,hLzMC[i],hLzGen0fake,"Lz #Lambda 10 layers for 0 fake",foutLambda);
+
 		}
 	}
 
-	    //Distribuzione 3D per efficienza
+	//efficiency 0 fake
+
+		
+
+	   //Distribuzione 3D per efficienza
 	TH3F* hYPtLzMCBar[3], *hYPtLzGenBar[3], *hYPtLzRecBar[3];
+	TH3F* hYPtLzGenBar0fake, *hYPtLzRecBar0fake;
 	hYPtLzMCBar[0]=(TH3F*)hLambdaBar->Get("hYPtLzMC");
 	hYPtLzGenBar[0]=(TH3F*)hLambdaBar->Get("hYPtLzGen");
 	hYPtLzRecBar[0]=(TH3F*)hLambdaBar->Get("hYPtLzRec");
@@ -103,6 +117,8 @@ void EfficiencyLambda(){
 	hYPtLzMCBar[2]=(TH3F*)hLambdaBarMoreLayer->Get("hYPtLzMC");
 	hYPtLzGenBar[2]=(TH3F*)hLambdaBarMoreLayer->Get("hYPtLzGen");
 	hYPtLzRecBar[2]=(TH3F*)hLambdaBarMoreLayer->Get("hYPtLzRec");
+	hYPtLzGenBar0fake=(TH3F*)hLambdaBarMoreLayer->Get("hYPtLzGen0fake;1");
+	hYPtLzRecBar0fake=(TH3F*)hLambdaBarMoreLayer->Get("hYPtLzRec0fake;1");
 
 	TH1F* hYMCBar[3],*hYGenBar[3], *hYRecBar[3], *hPtMCBar[3], *hPtGenBar[3], *hPtRecBar[3], *hLzMCBar[3], *hLzGenBar[3], *hLzRecBar[3];
 	//efficiency for y
@@ -120,6 +136,7 @@ void EfficiencyLambda(){
 		hLzMCBar[i]=(TH1F*)hYPtLzMCBar[i]->ProjectionZ();
 		hLzGenBar[i]=(TH1F*)hYPtLzGenBar[i]->ProjectionZ();
 		hLzRecBar[i]=(TH1F*)hYPtLzRecBar[i]->ProjectionZ();
+
 		
 		if(i==0){
 			efficiency(hYRecBar[i],hYMCBar[i],hYGenBar[i],"y #Lambda Bar",foutLambda);
@@ -139,6 +156,13 @@ void EfficiencyLambda(){
 			efficiency(hLzRecBar[i],hLzMCBar[i],hLzGenBar[i],"Lz #Lambda Bar 10 layers",foutLambda);
 		}
 	}
+
+	TH1F *hLzGen0fakebar, *hLzRec0fakebar;
+		hLzGen0fakebar=(TH1F*)hYPtLzGenBar0fake->ProjectionZ();
+		hLzRec0fakebar=(TH1F*)hYPtLzRecBar0fake->ProjectionZ();
+
+		efficiency(hLzRec0fakebar,hLzMCBar[2],hLzGen0fakebar,"Lz #Lambda barr 10 layers for 0 fake",foutLambda);
+	
 	TCanvas *effLambda=new TCanvas("effLambda");
 	TCanvas *effLambdaBar=new TCanvas("effLambdaBar");
 	
@@ -218,6 +242,7 @@ void EfficiencyLambda(){
 		effBartrasl[i]->Draw("SAME");
 		effBar10lay[i]->Draw("SAME");
 	}
+	
 
     //Distribuzione 3D per efficienza Lambda Bar
 /*	TH3F* hYPtLzMCBar=(TH3F*)hLambdaBar->Get("hYPtLzMC");

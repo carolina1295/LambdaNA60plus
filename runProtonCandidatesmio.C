@@ -119,7 +119,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   TH2F *hyPiP = new TH2F("hyPiP", "y pions vs y Protons from Lambda decays", 50, 0., 5., 50, 0., 5.);
  
   
-  TFile *fout = new TFile("AntiPROTON-Signal-histos.root", "recreate");
+  TFile *fout = new TFile("AntiPROTON-Signal-histos8.root", "recreate");
   
   //int outN = nev/10;
   //if (outN<1) outN=1;
@@ -129,8 +129,8 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   det->ReadSetup(setup, setup);
   det->InitBkg(Eint); //check modificare bkg su altro file
   det->ForceLastActiveLayer(det->GetLastActiveLayerITS()); // will not propagate beyond VT
-
-  det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
+  det->SetMinITSHits(7);
+  //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
   //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()-1); //NA60
   det->SetMinMSHits(0); //NA60+
   //det->SetMinMSHits(det->GetNumberOfActiveLayersMS()-1); //NA60
@@ -287,7 +287,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 	//GENERAZIONE
 	for (Int_t iev = 0; iev < nevents; iev++){
 		hNevents->Fill(0.5);
-		Double_t vprim[3] = {0, 0, 0};//vertice primario
+		Double_t vprim[3] = {1, 1, 8};//vertice primario
 		if(iev%10000==0) printf(" ***************  ev = %d \n", iev);
 		int nrec = 0;
 		int nfake = 0;
