@@ -105,7 +105,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
       hLambday=hLambdabary;
     }
   }*/
- TFile *fntupla = new TFile("ntuplaMoreLayer.root", "recreate");
+ TFile *fntupla = new TFile("ntuplaMoreLayerconBKG.root", "recreate");
 	float variable[31];
 	TNtuple *nt = new	TNtuple("nt","Variablesforperformance","nfaketrkprot:nfaketrkpion:ygen:xP:yP:zP:Vxgen:Vygen:Vzgen:massinvrec:pxgenprot:pygenprot:pzgenprot:pxgenpion:pygenpion:pzgenpion:dca:chi2prot:chi2ITSprot:chi2pion:chi2ITSpion:pxrecprot:pyrecprot:pzrecprot:pxrecpion:pyrecpion:pzrecpion:massinvswitch:pxlambda:pylambda:pzlambda");
 
@@ -119,7 +119,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   TH2F *hyPiP = new TH2F("hyPiP", "y pions vs y Protons from Lambda decays", 50, 0., 5., 50, 0., 5.);
  
   
-  TFile *fout = new TFile("LambdaMoreLayer-Signal-histos.root", "recreate");
+  TFile *fout = new TFile("LambdaMoreLayerconBKG-Signal-histos.root", "recreate");
   
   //int outN = nev/10;
   //if (outN<1) outN=1;

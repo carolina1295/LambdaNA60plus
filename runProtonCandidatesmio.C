@@ -119,7 +119,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   TH2F *hyPiP = new TH2F("hyPiP", "y pions vs y Protons from Lambda decays", 50, 0., 5., 50, 0., 5.);
  
   
-  TFile *fout = new TFile("AntiPROTON-Signal-histos8.root", "recreate");
+  TFile *fout = new TFile("PROTON-Signal-histos.root", "recreate");
   
   //int outN = nev/10;
   //if (outN<1) outN=1;
@@ -267,7 +267,8 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 	TH2F* hResPyVsnfakeprot= new TH2F("hResPyVsnfakeprot", " P_{Yrec}-P_{Ygen} vs Nfake Proton", 6, -0.5 , 5.5,300, -1 , 1);//width=0.01Lz
 	TH1F* hResPycorrection= new TH1F("hResPycorrection", " P_{Ynotcorrect}-P_{Ycorrect} ",300, -1 , 1);
 
-
+//efficiency
+  TH1F* hEfficiency = new TH1F("hEfficiency","Efficiency #pi+",32,6.5,38.5);
   
 	TH2F *hd0 = new TH2F("hd0", "", 100, 0, 0.1, 30, 0, 3);
   THnSparseF *hsp = CreateSparse();
@@ -282,97 +283,109 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
       ntD0cand = new TNtuple("ntD0cand", "ntD0cand", "mass:pt:y:dist:cosp:d01:d02:d0prod:dca:ptMin:ptMax", 32000);
     }
   Float_t arrnt[11];
-	float nfaketrk = 0, nfaketrkprot = 0, nfaketrkpion = 0;
-	int count=0, countrec=0;
+  	Double_t vprim[3];
+  for(int i=0;i<30;i++){
+    	float nfaketrk = 0, nfaketrkprot = 0, nfaketrkpion = 0;
+	  int count=0;
+    double countrec=0;
+     vprim[0] = 1;
+     vprim[1] = 1; 
+     vprim[2] = 7+i;
+   
 	//GENERAZIONE
-	for (Int_t iev = 0; iev < nevents; iev++){
-		hNevents->Fill(0.5);
-		Double_t vprim[3] = {1, 1, 8};//vertice primario
-		if(iev%10000==0) printf(" ***************  ev = %d \n", iev);
-		int nrec = 0;
-		int nfake = 0;
-			nfaketrk = 0;
-			nfaketrkprot = 0;
-			nfaketrkpion = 0;
-		double pxyz[3], pProtRec[3], pPionRec[3], pProtGen[3], pPionGen[3];
-		
-		if (simulateBg && (iev%refreshBg)==0) det->GenBgEvent(0.,0.,0.);//bkg c'è sempre
-		Double_t ptGenD = hLambdapt->GetRandom(); // get Lambda distribution from file
-		Double_t yGenD = hLambday->GetRandom();
-		Double_t phi = gRandom->Rndm() * 2 * TMath::Pi();
-		Double_t pxGenD = ptGenD * TMath::Cos(phi);
-		Double_t pyGenD = ptGenD * TMath::Sin(phi);
-		
-		Double_t mass = TDatabasePDG::Instance()->GetParticle(pdgParticle)->Mass();
-		Double_t mt = TMath::Sqrt(ptGenD * ptGenD + mass * mass);
-		Double_t pzGenD = mt * TMath::SinH(yGenD);
-		Double_t en = mt * TMath::CosH(yGenD);
+    for (Int_t iev = 0; iev < nevents; iev++){
+      hNevents->Fill(0.5);
+      //Double_t vprim[3] = {1, 1, 8};//vertice primario
+      if(iev%10000==0) printf(" ***************  ev = %d \n", iev);
+      int nrec = 0;
+      int nfake = 0;
+        nfaketrk = 0;
+        nfaketrkprot = 0;
+        nfaketrkpion = 0;
+      double pxyz[3], pProtRec[3], pPionRec[3], pProtGen[3], pPionGen[3];
+      
+      if (simulateBg && (iev%refreshBg)==0) det->GenBgEvent(0.,0.,0.);//bkg c'è sempre
+      Double_t ptGenD = hLambdapt->GetRandom(); // get Lambda distribution from file
+      Double_t yGenD = hLambday->GetRandom();
+      Double_t phi = gRandom->Rndm() * 2 * TMath::Pi();
+      Double_t pxGenD = ptGenD * TMath::Cos(phi);
+      Double_t pyGenD = ptGenD * TMath::Sin(phi);
+      
+      Double_t mass = TDatabasePDG::Instance()->GetParticle(pdgParticle)->Mass();
+      Double_t mt = TMath::Sqrt(ptGenD * ptGenD + mass * mass);
+      Double_t pzGenD = mt * TMath::SinH(yGenD);
+      Double_t en = mt * TMath::CosH(yGenD);
 
-		Double_t massProton = TDatabasePDG::Instance()->GetParticle(2212)->Mass();
-		Double_t massPion = TDatabasePDG::Instance()->GetParticle(-211)->Mass();
-		//printf("massproton= %f, masspion= %f", massProton, massPion);
-		mom->SetPxPyPzE(pxGenD, pyGenD, pzGenD, en); //setto i valori del quadrimpulso della particella lambda generata
-		//printf("Momenti gen: px= %f, py= %f, pz= %f \n", mom->Px(), mom->Py(), mom->Pz());
-		hVxGen->Fill(vprim[0]);
-		hVyGen->Fill(vprim[1]);
-		hVzGen->Fill(vprim[2]);
-		
-		double diff;
-		Int_t arrpdgdau[2];
-		Double_t ptK = -999.;
-		Double_t ptPi = -999.;
-		Double_t yK=-999.;
-		Double_t yPi = -999.;
-		Int_t icount = 0;
-		Double_t secvertgenK[3]={0.,0.,0.};
-		Double_t secvertgenPi[3]={0.,0.,0.};
-		Double_t ptot = 0, massal = 0, p = 0, Respxyzprot[3] = {0.,0.,0.};
-		//printf("evento= %d, numero prodotti:%d \n",iev,np);  
-		hYGen->Fill(yGenD);
-		hPtGen->Fill(ptGenD);
-		hYPtGen->Fill(yGenD, ptGenD);
+      Double_t massProton = TDatabasePDG::Instance()->GetParticle(2212)->Mass();
+      Double_t massPion = TDatabasePDG::Instance()->GetParticle(-211)->Mass();
+      //printf("massproton= %f, masspion= %f", massProton, massPion);
+      mom->SetPxPyPzE(pxGenD, pyGenD, pzGenD, en); //setto i valori del quadrimpulso della particella lambda generata
+      //printf("Momenti gen: px= %f, py= %f, pz= %f \n", mom->Px(), mom->Py(), mom->Pz());
+      hVxGen->Fill(vprim[0]);
+      hVyGen->Fill(vprim[1]);
+      hVzGen->Fill(vprim[2]);
+      
+      double diff;
+      Int_t arrpdgdau[2];
+      Double_t ptK = -999.;
+      Double_t ptPi = -999.;
+      Double_t yK=-999.;
+      Double_t yPi = -999.;
+      Int_t icount = 0;
+      Double_t secvertgenK[3]={0.,0.,0.};
+      Double_t secvertgenPi[3]={0.,0.,0.};
+      Double_t ptot = 0, massal = 0, p = 0, Respxyzprot[3] = {0.,0.,0.};
+      //printf("evento= %d, numero prodotti:%d \n",iev,np);  
+      hYGen->Fill(yGenD);
+      hPtGen->Fill(ptGenD);
+      hYPtGen->Fill(yGenD, ptGenD);
 
-		TLorentzVector *pDecDau = new TLorentzVector(0., 0., 0., 0.);//quadrimpulso figli
-		pDecDau->SetXYZM(pxGenD, pyGenD, pzGenD, mass);
+      TLorentzVector *pDecDau = new TLorentzVector(0., 0., 0., 0.);//quadrimpulso figli
+      pDecDau->SetXYZM(pxGenD, pyGenD, pzGenD, mass);
 
-		Int_t crg=-1;//setta il segno della carica
-		count++;
-		if (det->SolveSingleTrack(pDecDau->Pt(), pDecDau->Rapidity(), pDecDau->Phi(), mass, crg, vprim[0], vprim[1], vprim[2], 0, 1, 99)){
-			KMCProbeFwd *trw = det->GetLayer(0)->GetWinnerMCTrack();
-			if (trw){
-				if (trw->GetNormChi2(kTRUE) < ChiTot){
-					nrec++;
-					nfake += trw->GetNFakeITSHits();
-					trw->GetPXYZ(pxyz);
-					nfaketrk = trw->GetNFakeITSHits();
-					/*printf("pxrec %f pxgen %f \n", pxyz[0],pxGenD);
-					printf("pyrec %f pygen %f \n", pxyz[1],pyGenD);
-					printf("pzrec %f pzgen %f \n", pxyz[2],pzGenD);*/
-					daugen[0].SetXYZM(pxGenD, pyGenD, pzGenD, mass);
-					daurec[0].SetXYZM(pxyz[0], pxyz[1], pxyz[2], mass);
-					recProbe[0] = *trw; 
-					hPrecXprot->Fill(pxyz[0]);
-					hPrecYprot->Fill(pxyz[1]);
-					hPrecZprot->Fill(pxyz[2]);	
-					hPrecgenXprot->Fill(pxyz[0]-pxGenD);
-					hPrecgenYprot->Fill(pxyz[1]-pyGenD);
-					hPrecgenZprot->Fill(pxyz[2]-pzGenD);
-					Respxyzprot[0]=(pxyz[0]-pxGenD);
-					Respxyzprot[1]=(pxyz[1]-pyGenD);
-					Respxyzprot[2]=(pxyz[2]-pzGenD);
-					if(nfaketrk == 0){
-						hResPxVsYprot->Fill(Respxyzprot[0],yGenD);
-						hResPyVsYprot->Fill(Respxyzprot[1],yGenD);
-						hResPzVsYprot->Fill(Respxyzprot[2],yGenD);
-						hResPxVsYprotRel->Fill(Respxyzprot[0]/pxyz[0],yGenD);
-						hResPyVsYprotRel->Fill(Respxyzprot[1]/pxyz[1],yGenD);
-						hResPzVsYprotRel->Fill(Respxyzprot[2]/pxyz[2],yGenD);
-					}
-					countrec++;
-				}	
-			}
-		}
-	} //event loop
+      Int_t crg=1;//setta il segno della carica
+      count++;
+      if (det->SolveSingleTrack(pDecDau->Pt(), pDecDau->Rapidity(), pDecDau->Phi(), mass, crg, vprim[0], vprim[1], vprim[2], 0, 1, 99)){
+        KMCProbeFwd *trw = det->GetLayer(0)->GetWinnerMCTrack();
+        if (trw){
+          if (trw->GetNormChi2(kTRUE) < ChiTot){
+            nrec++;
+            nfake += trw->GetNFakeITSHits();
+            trw->GetPXYZ(pxyz);
+            nfaketrk = trw->GetNFakeITSHits();
+            /*printf("pxrec %f pxgen %f \n", pxyz[0],pxGenD);
+            printf("pyrec %f pygen %f \n", pxyz[1],pyGenD);
+            printf("pzrec %f pzgen %f \n", pxyz[2],pzGenD);*/
+            daugen[0].SetXYZM(pxGenD, pyGenD, pzGenD, mass);
+            daurec[0].SetXYZM(pxyz[0], pxyz[1], pxyz[2], mass);
+            recProbe[0] = *trw; 
+            hPrecXprot->Fill(pxyz[0]);
+            hPrecYprot->Fill(pxyz[1]);
+            hPrecZprot->Fill(pxyz[2]);	
+            hPrecgenXprot->Fill(pxyz[0]-pxGenD);
+            hPrecgenYprot->Fill(pxyz[1]-pyGenD);
+            hPrecgenZprot->Fill(pxyz[2]-pzGenD);
+            Respxyzprot[0]=(pxyz[0]-pxGenD);
+            Respxyzprot[1]=(pxyz[1]-pyGenD);
+            Respxyzprot[2]=(pxyz[2]-pzGenD);
+            if(nfaketrk == 0){
+              hResPxVsYprot->Fill(Respxyzprot[0],yGenD);
+              hResPyVsYprot->Fill(Respxyzprot[1],yGenD);
+              hResPzVsYprot->Fill(Respxyzprot[2],yGenD);
+              hResPxVsYprotRel->Fill(Respxyzprot[0]/pxyz[0],yGenD);
+              hResPyVsYprotRel->Fill(Respxyzprot[1]/pxyz[1],yGenD);
+              hResPzVsYprotRel->Fill(Respxyzprot[2]/pxyz[2],yGenD);
+            }
+            countrec++;
+          }	
+        }
+      }
+    } //event loop
+
+    hEfficiency->Fill(7+i,countrec/nevents);
+    hEfficiency->SetMarkerStyle(20);
+    hEfficiency->SetLineColor(kBlue);
+  }
   /*hMassAll->SetLineColor(kBlue);
   hMassAll->Draw();
   hMassAll->SetMinimum(0.1);
@@ -381,6 +394,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 	*/
 
   fout->cd();
+  hEfficiency->Write();
 	hYPtLzMC->Write();
 	hYPtLzGen->Write();
 	hYPtLzRec->Write();

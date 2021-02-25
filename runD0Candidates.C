@@ -101,9 +101,9 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   TH1D *hyPi = new TH1D("hyPi", "y pions from D0 decays", 50, 0., 5.);
   TH2F *hyPiK = new TH2F("hyPiK", "y pions vs y Kaons from D0 decays", 50, 0., 5., 50, 0., 5.);
 
- TFile *fntuplaD0 = new TFile("ntuplaD0.root", "recreate");
+ TFile *fntuplaD0 = new TFile("ntuplaD0MoreLayer.root", "recreate");
 	float variable[23];
-	TNtuple *ntD0 = new TNtuple("ntD0","Variablesforperformance","nfaketrkKaon:nfaketrkpion:ygen:xP:yP:zP:Vxgen:Vygen:Vzgen:massinvrec:diffxprot:diffyprot:diffzprot:diffxpion:diffypion:diffzpion:dca:pxrecprot:pyrecprot:pzrecprot:pxrecpion:pyrecpion:pzrecpion");
+	TNtuple *ntD0 = new TNtuple("ntD0","Variablesforperformance","nfaketrkKaon:nfaketrkpion:ygen:xP:yP:zP:Vxgen:Vygen:Vzgen:massinvrec:pxgenprot:pygenprot:pzgenprot:pxgenpion:pygenpion:pzgenpion:dca:pxrecprot:pyrecprot:pzrecprot:pxrecpion:pyrecpion:pzrecpion");
 
 
 
@@ -117,7 +117,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   printf("*************************************\n");
   printf("number of magnetic field regions = %d\n", BNreg);
   
-  TFile *fout = new TFile("D0-Signal-histos.root", "recreate");
+  TFile *fout = new TFile("D0MoreLayer-Signal-histos.root", "recreate");
   
   for (int i = 0; i < BNreg; i++){
     BVal = mag->GetBVals(i);
@@ -136,8 +136,8 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   det->ReadSetup(setup, setup);
   det->InitBkg(Eint);
   det->ForceLastActiveLayer(det->GetLastActiveLayerITS()); // will not propagate beyond VT
-
-  det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
+  det->SetMinITSHits(7);
+  //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
   //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()-1); //NA60
   det->SetMinMSHits(0); //NA60+
   //det->SetMinMSHits(det->GetNumberOfActiveLayersMS()-1); //NA60
@@ -188,6 +188,10 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   
   // define mother particle
   Int_t pdgParticle = 421;
+
+  TH3F* hYPtLzGen=new TH3F("hYPtLzGen", "Y-Pt-Lz corr match Gen", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
+	TH3F* hYPtLzRec=new TH3F("hYPtLzRec", "Y-Pt-Lz corr match Rec", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
+	TH3F* hYPtLzMC=new TH3F("hYPtLzMC", "Y-Pt-Lz corr match MC", 80, 0, 6, 40, ptminSG, ptmaxSG,100,0,50);
   
   TH2F* hYPtGen = new TH2F("hYPtGen", "Y-Pt corr match", 80, 1.0, 5.4, 40, ptminSG, ptmaxSG);
   TH1D* hPtGen = new TH1D("hPtGen", "Pt gen", 40, ptminSG, ptmaxSG);
@@ -432,12 +436,12 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 		variable[7]=(float)secvertgenK[1];
 		variable[8]=(float)secvertgenK[2];
 		variable[9]=(float)massRecD;
-		variable[10]=(float)(RespxyzKaon[0]);
-		variable[11]=(float)(RespxyzKaon[1]);
-		variable[12]=(float)(RespxyzKaon[2]);
-		variable[13]=(float)(Respxyzpion[0]);
-		variable[14]=(float)(Respxyzpion[1]);
-		variable[15]=(float)(Respxyzpion[2]);
+		variable[10]=(float)(daugen[0].Px());
+		variable[11]=(float)(daugen[0].Py());
+		variable[12]=(float)(daugen[0].Pz());
+		variable[13]=(float)(daugen[1].Px());
+		variable[14]=(float)(daugen[1].Py());
+		variable[15]=(float)(daugen[1].Pz());
 		variable[16]=dca;
 		variable[17]=(float)(daurec[0].Px());
 		variable[18]=(float)(daurec[0].Py());

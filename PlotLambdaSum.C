@@ -27,6 +27,7 @@
 #include "TH2F.h"
 #include "TProfile.h"
 #include "TMultiGraph.h"
+#include "TPad.h"
 
 
 void Projection(TH2F* h2D,  int range, bool rapidity, char *name );
@@ -38,8 +39,8 @@ void efficiency(TH1F* hRec, TH1F* hMC, TH1F* hGen, char* xaxis, TFile *f);
 
 void PlotLambdaSum(){
 
-	TFile *hLambda=new TFile("LambdaMoreLayer-Signal-histos.root");
-	TFile *hLambdaBar=new TFile("LambdaBarMoreLayer-Signal-histos.root");
+	TFile *hLambda=new TFile("LambdastandconBKG-Signal-histos.root");
+	TFile *hLambdaBar=new TFile("LambdaBarstandconBKG-Signal-histos.root");
 	TFile *hD0=new TFile("histogramD0.root");
 	TFile *hPion=new TFile("PION-Signal-histos.root");
 	TFile *hPionpos=new TFile("PIONpos-Signal-histos.root");
@@ -281,7 +282,7 @@ void PlotLambdaSum(){
 	TH2F *hDeltaLzVsLzgen = new TH2F("hDeltaLzVsLzgen", "#Delta Lz vs Lz gen", 200, 0, 60, 600, -1, 1);
 	//Apertura file di input con variabili lambda per studio performance
 	//Lettura Ntupla 
- 	TFile filin("ntuplaMoreLayer.root");
+ 	TFile filin("ntuplastandconBKG.root");
   	float nfaketrkprot, nfaketrkpion,y,xrec,yrec,zrec,secvertgenProt[3],massinvrec,pGenProt[3],pGenPion[3],dca,pRecProt[3],pRecPion[3],chi2prot,chi2ITSprot,chi2pion,chi2ITSpion,massinvSwitch,pGenLambda[3];
   	TNtuple *variables = (TNtuple*)filin.Get("nt");
 		variables->SetBranchAddress("nfaketrkprot",&nfaketrkprot);
@@ -414,7 +415,7 @@ void PlotLambdaSum(){
 	}
 	filin.Close();
 
-	TFile filinBar("ntuplaLambdaBarMoreLayer.root");
+	TFile filinBar("ntuplaLambdaBarstandconBKG.root");
   	float nfaketrkprotBar, nfaketrkpionBar,yBar,xrecBar,yrecBar,zrecBar,secvertgenProtBar[3],massinvrecBar,pGenProtBar[3],pGenPionBar[3],dcaBar,pRecProtBar[3],pRecPionBar[3],chi2protBar,chi2ITSprotBar,chi2pionBar,chi2ITSpionBar,massinvSwitchBar,pGenLambdaBar[3];
   	TNtuple *variablesBar = (TNtuple*)filinBar.Get("ntLambdaBarstand");
 		variablesBar->SetBranchAddress("nfaketrkprot",&nfaketrkprotBar);
@@ -668,9 +669,9 @@ void PlotLambdaSum(){
 	new TCanvas();
 	hsumSwap->Draw();
 	hsum->Draw("same");
-
+*/
 	TCanvas* c1=new TCanvas("c1");
-	ProjectionforBinMassInv(hMassinrecY, "#Lambda+#bar{#Lambda} Inv Mass vs Y", "Y", c1, foutLambda);*/
+	ProjectionforBinMassInv(hMassinrecY, "#Lambda+#bar{#Lambda} Inv Mass vs Y", "Y", c1, foutLambda);
 
 	TCanvas* c2p=new TCanvas("c2p");
 	ProjectionforBin(hResPxVsYprot ,"#Lambda+#bar{#Lambda} ResPx vs Y prot", "Y", c2p, foutLambda);
@@ -685,6 +686,20 @@ void PlotLambdaSum(){
 	TCanvas* c7p=new TCanvas("c7p");
 	ProjectionforBin(hResPzVsYpion, "#Lambda+#bar{#Lambda} ResPz vs Y pion", "Y", c7p, foutLambda);
 
+	TCanvas* c5piRel=new TCanvas("c5piRel");
+	ProjectionforBin(hResPxVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPx vs Y Rel", "Y", c5piRel, foutLambda);
+	TCanvas* c6piRel=new TCanvas("c6piRel");
+	ProjectionforBin(hResPyVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPy vs Y Rel", "Y", c6piRel, foutLambda);
+	TCanvas* c7piRel=new TCanvas("c7piRel");
+	ProjectionforBin(hResPzVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPz vs Y Rel", "Y", c7piRel, foutLambda);
+
+	TCanvas* c5pRel=new TCanvas("c5pRel");
+	ProjectionforBin(hResPxVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPx vs Y Rel", "Y", c5pRel, foutLambda);
+	TCanvas* c6pRel=new TCanvas("c6pRel");
+	ProjectionforBin(hResPyVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPy vs Y Rel", "Y", c6pRel, foutLambda);
+	TCanvas* c7pRel=new TCanvas("c7pRel");
+	ProjectionforBin(hResPzVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPz vs Y Rel", "Y", c7pRel, foutLambda);
+
 	TCanvas* resP=new TCanvas("resP");
 	
 	resP->Divide(3,1);
@@ -695,22 +710,25 @@ void PlotLambdaSum(){
 	mgpLD[0] = new TMultiGraph();
 	mgpLD[1] = new TMultiGraph();
 	mgpLD[2] = new TMultiGraph();
-	
-	TCanvas* resPLD=new TCanvas("resPLD");
-	resPLD->Divide(3,1);
+	mgpLD[0]->SetTitle("Relative Resolutions on P_{x} for #Lambda and D_{0} daughters; y ; #sigma");
+	mgpLD[1]->SetTitle("Relative Resolutions on P_{y} for #Lambda and D_{0} daughters; y ; #sigma");
+	mgpLD[2]->SetTitle("Relative Resolutions on P_{z} for #Lambda and D_{0} daughters; y ; #sigma");
+	mgp[0]->SetTitle("Relative Resolutions on P_{x} for #Lambda daughters ; y ; #sigma");
+	mgp[1]->SetTitle("Relative Resolutions on P_{y} for #Lambda daughters; y ; #sigma");
+	mgp[2]->SetTitle("Relative Resolutions on P_{z} for #Lambda daughters; y ; #sigma");
 	TGraphErrors *pprot[3], *ppion[3], *pkaonD0[3], *ppionD0[3];
-	pprot[0]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResPx vs Y prot");
-	pprot[1]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResPy vs Y prot");
-	pprot[2]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResPz vs Y prot");
-	ppion[0]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResPx vs Y pion");
-	ppion[1]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResPy vs Y pion");
-	ppion[2]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResPz vs Y pion");
-	pkaonD0[0]=(TGraphErrors*)hD0->Get("SigmahResPxVsYKaon");
-	pkaonD0[1]=(TGraphErrors*)hD0->Get("SigmahResPyVsYKaon");
-	pkaonD0[2]=(TGraphErrors*)hD0->Get("SigmahResPzVsYKaon");
-	ppionD0[0]=(TGraphErrors*)hD0->Get("SigmahResPxVsYpion");
-	ppionD0[1]=(TGraphErrors*)hD0->Get("SigmahResPyVsYpion");
-	ppionD0[2]=(TGraphErrors*)hD0->Get("SigmahResPzVsYpion");
+	pprot[0]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} prot ResPx vs Y Rel");
+	pprot[1]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} prot ResPy vs Y Rel");
+	pprot[2]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} prot ResPz vs Y Rel");
+	ppion[0]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} pion ResPx vs Y Rel");
+	ppion[1]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} pion ResPy vs Y Rel");
+	ppion[2]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} pion ResPz vs Y Rel");
+	pkaonD0[0]=(TGraphErrors*)hD0->Get("SigmahResPxVsYKaonRel");
+	pkaonD0[1]=(TGraphErrors*)hD0->Get("SigmahResPyVsYKaonRel");
+	pkaonD0[2]=(TGraphErrors*)hD0->Get("SigmahResPzVsYKaonRel");
+	ppionD0[0]=(TGraphErrors*)hD0->Get("SigmahResPxVsYpionRel");
+	ppionD0[1]=(TGraphErrors*)hD0->Get("SigmahResPyVsYpionRel");
+	ppionD0[2]=(TGraphErrors*)hD0->Get("SigmahResPzVsYpionRel");
 	for(int i=0;i<3;i++){
 		resP->cd(i+1);
 		gPad->SetGrid();
@@ -726,6 +744,24 @@ void PlotLambdaSum(){
 		mgp[i]->GetYaxis()->SetTitle("#sigma");
 		mgp[i]->Draw("a");
 	}
+	resP->cd(1);
+	auto legend = new TLegend(0.1,0.7,0.48,0.9);
+   	//legend->SetHeader("The Legend Title","C"); // option "C" allows to center the header
+   	legend->AddEntry(pprot[0],"#Lambda proton","lep");
+  	legend->AddEntry(ppion[0],"#Lambda pion","lep");
+
+   	legend->Draw();
+
+
+	//mg->SetTitle("Different resolutions on P_{x}; y ; #sigma (#frac{Gev}/{c})");
+	TCanvas* resPLD=new TCanvas("resPLD");
+	resPLD->Divide(3,1);
+	//resPLD->SetTitle("pippo");
+	//TLatex * tex = new TLatex(0.5,0.8,"My Title"); 
+	//tex->SetNDC(); 
+	//tex->SetTextSize(0.2); 
+	//tex->Draw(); 
+
 	for(int i=0;i<3;i++){
 		resPLD->cd(i+1);
 		gPad->SetGrid();
@@ -749,8 +785,19 @@ void PlotLambdaSum(){
 		mgpLD[i]->GetYaxis()->SetTitle("#sigma");
 		mgpLD[i]->Draw("a");
 	}
+	resPLD->cd(1);
+	auto legendD = new TLegend(0.1,0.7,0.48,0.9);
+   	//legend->SetHeader("The Legend Title","C"); // option "C" allows to center the header
+   	legendD->AddEntry(pprot[0],"#Lambda proton","lep");
+  	legendD->AddEntry(ppion[0],"#Lambda pion","lep");
+   	legendD->AddEntry(pkaonD0[0],"D_{0} kaon","lep");
+   	legendD->AddEntry(ppionD0[0],"D_{0} pion","lep");	   
+   	legendD->Draw();
 	
-	TH2F* hResPxPionRel=(TH2F*)hPion->Get("hResPxVsYpionRel");
+ 
+		
+	
+/*	TH2F* hResPxPionRel=(TH2F*)hPion->Get("hResPxVsYpionRel");
 	TH2F* hResPyPionRel=(TH2F*)hPion->Get("hResPyVsYpionRel");
 	TH2F* hResPzPionRel=(TH2F*)hPion->Get("hResPzVsYpionRel");
 
@@ -794,19 +841,7 @@ void PlotLambdaSum(){
 	TCanvas* c7AntiProt=new TCanvas("c7AntiProt");
 	ProjectionforBin(hResPzAntiProtRel, "Antiproton ResPz vs Y relativa", "Y", c7AntiProt, foutLambda);
 
-/*	TCanvas* c5piRel=new TCanvas("c5piRel");
-	ProjectionforBin(hResPxVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPx vs Y Rel", "Y", c5piRel, foutLambda);
-	TCanvas* c6piRel=new TCanvas("c6piRel");
-	ProjectionforBin(hResPyVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPy vs Y Rel", "Y", c6piRel, foutLambda);
-	TCanvas* c7piRel=new TCanvas("c7piRel");
-	ProjectionforBin(hResPzVsYpionRel, "#Lambda+#bar{#Lambda} pion ResPz vs Y Rel", "Y", c7piRel, foutLambda);
 
-	TCanvas* c5pRel=new TCanvas("c5pRel");
-	ProjectionforBin(hResPxVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPx vs Y Rel", "Y", c5pRel, foutLambda);
-	TCanvas* c6pRel=new TCanvas("c6pRel");
-	ProjectionforBin(hResPyVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPy vs Y Rel", "Y", c6pRel, foutLambda);
-	TCanvas* c7pRel=new TCanvas("c7pRel");
-	ProjectionforBin(hResPzVsYprotRel, "#Lambda+#bar{#Lambda} prot ResPz vs Y Rel", "Y", c7pRel, foutLambda);
 	
 */
 
@@ -907,8 +942,6 @@ void PlotLambdaSum(){
 	hLambda->Close();
 	hD0->Close();
 	foutLambda->Close();
-
-
 
 }
 
