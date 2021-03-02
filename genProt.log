@@ -1,0 +1,1350 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  AliReconstructedFirst found in libPWGCFKPAnalysis  is already in libPWGCFK0pAnalysis 
+Warning in <TInterpreter::ReadRootmapFile>: class  AliReconstructedSecond found in libPWGCFKPAnalysis  is already in libPWGCFK0pAnalysis 
+Info in <TUnixSystem::ACLiC>: creating shared library /home/carolinda/Scaricati/na60plus/na60fastsim/files/KMCDetectorFwd_cxx.so
+Info in <TUnixSystem::ACLiC>: creating shared library /home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runProtonCandidatesmio_C.so
+warning: Please remove the deprecated flag -g
+In file included from /home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runProtonCandidatesmio_C_ACLiC_dict.cxx:41:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runProtonCandidatesmio.C: In function ‘void GenerateD0SignalCandidates(Int_t, double, const char*, const char*, const char*, int, bool, bool)’:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runProtonCandidatesmio.C:275:66: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+  275 |   const Int_t nDim=static_cast<const Int_t>(hsp->GetNdimensions());
+      |                                                                  ^
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runProtonCandidatesmio.C: In function ‘void MakeD0CombinBkgCandidates(const char*, Int_t, Int_t)’:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runProtonCandidatesmio.C:517:66: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+  517 |   const Int_t nDim=static_cast<const Int_t>(hsp->GetNdimensions());
+      |                                                                  ^
+--> pt and y shape of Lambda from /home/carolinda/Scaricati/PtY_spectra.root
+Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <>
+Info in <TGeoGlobalMagField::Lock>: Global magnetic field <> is now locked
+tutto beneeeeeeee yeeeeeeeeeeeee 
+tutto beneeeeeeee NOTLAMBDAAAAAAA 
+Magnetic Field: Custom0
+No BeamPipe found in the setup ~/Scaricati/na60plus/na60fastsim/files/setup-5um-maps_Eff1.txt
+count 10 
+DefStep: Air 100.000000 Mat: 5.000000 | N.MagField regions: 2
+KMCProbeFwd is initialized with 11 slots
+--- Background parameters for E=160 GeV/nucleon ---
+Simulation of background at 160 GeV/nucleon
+pions:   total multiplicity = 1258.000000 ; T = 0.180000
+kaons:   total multiplicity = 155.000000 ; T = 0.230000
+protons: total multiplicity = 292.000000 ; T = 0.310000
+Attention: overriding last active layer from 10 to 10
+*************************************
+number of magnetic field regions = 2
+*** Field region 0 ***
+Bx = -20.000000 B = 0.000000 Bz = 0.000000 zmin = -2.000000 zmax = 40.000000
+*** Field region 1 ***
+B = 250.000000 Rmin = 30.000000 Rmax = 300.000000 zmin = 380.000000 zmax = 680.000000
+ ***************  ev = 0 
+fNChPi=895.970585 ntrPi=869.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=99.000000
+NEED TO KILL 10 0 
+ innLayCheck = 10 
+Need to kill nITS 0 
+ngr 0 patt 0 
+Patt convertito 00000000000000000000000000000000
+NEED TO KILL 9 1 
+ innLayCheck = 9 
+Need to kill nITS 1 
+ngr 0 patt 1024 
+Patt convertito 00000000000000000000010000000000
+NEED TO KILL 9 0 
+ innLayCheck = 9 
+Need to kill nITS 0 
+ngr 0 patt 0 
+Patt convertito 00000000000000000000000000000000
+NEED TO KILL 8 2 
+ innLayCheck = 8 
+Need to kill nITS 2 
+ngr 0 patt 1536 
+Patt convertito 00000000000000000000011000000000
+NEED TO KILL 8 1 
+ innLayCheck = 8 
+Need to kill nITS 1 
+ngr 0 patt 1024 
+Patt convertito 00000000000000000000010000000000
+NEED TO KILL 8 1 
+ innLayCheck = 8 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 8 0 
+ innLayCheck = 8 
+Need to kill nITS 0 
+ngr 0 patt 0 
+Patt convertito 00000000000000000000000000000000
+NEED TO KILL 8 1 
+ innLayCheck = 8 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 8 1 
+ innLayCheck = 8 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 7 2 
+ innLayCheck = 7 
+Need to kill nITS 2 
+ngr 0 patt 768 
+Patt convertito 00000000000000000000001100000000
+NEED TO KILL 7 2 
+ innLayCheck = 7 
+Need to kill nITS 2 
+ngr 0 patt 1280 
+Patt convertito 00000000000000000000010100000000
+NEED TO KILL 7 2 
+ innLayCheck = 7 
+Need to kill nITS 2 
+ngr 0 patt 1536 
+Patt convertito 00000000000000000000011000000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 1024 
+Patt convertito 00000000000000000000010000000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 256 
+Patt convertito 00000000000000000000000100000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 7 0 
+ innLayCheck = 7 
+Need to kill nITS 0 
+ngr 0 patt 0 
+Patt convertito 00000000000000000000000000000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 256 
+Patt convertito 00000000000000000000000100000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 7 1 
+ innLayCheck = 7 
+Need to kill nITS 1 
+ngr 0 patt 256 
+Patt convertito 00000000000000000000000100000000
+NEED TO KILL 6 3 
+ innLayCheck = 6 
+Need to kill nITS 3 
+ngr 0 patt 896 
+Patt convertito 00000000000000000000001110000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 1152 
+Patt convertito 00000000000000000000010010000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 384 
+Patt convertito 00000000000000000000000110000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 640 
+Patt convertito 00000000000000000000001010000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 768 
+Patt convertito 00000000000000000000001100000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 1280 
+Patt convertito 00000000000000000000010100000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 1536 
+Patt convertito 00000000000000000000011000000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 1024 
+Patt convertito 00000000000000000000010000000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 128 
+Patt convertito 00000000000000000000000010000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 256 
+Patt convertito 00000000000000000000000100000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 1152 
+Patt convertito 00000000000000000000010010000000
+NEED TO KILL 6 0 
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 128 
+Patt convertito 00000000000000000000000010000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 128 
+Patt convertito 00000000000000000000000010000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 256 
+Patt convertito 00000000000000000000000100000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 512 
+Patt convertito 00000000000000000000001000000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 256 
+Patt convertito 00000000000000000000000100000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 640 
+Patt convertito 00000000000000000000001010000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 128 
+Patt convertito 00000000000000000000000010000000
+NEED TO KILL 6 1 
+ innLayCheck = 6 
+Need to kill nITS 1 
+ngr 0 patt 128 
+Patt convertito 00000000000000000000000010000000
+NEED TO KILL 6 2 
+ innLayCheck = 6 
+Need to kill nITS 2 
+ngr 0 patt 384 
+Patt convertito 00000000000000000000000110000000
+NEED TO KILL 5 4 
+ innLayCheck = 5 
+Need to kill nITS 4 
+ngr 0 patt 960 
+Patt convertito 00000000000000000000001111000000
+NEED TO KILL 5 3 
+ innLayCheck = 5 
+Need to kill nITS 3 
+ngr 0 patt 832 
+Patt convertito 00000000000000000000001101000000
+NEED TO KILL 5 3 
+ innLayCheck = 5 
+Need to kill nITS 3 
+ngr 0 patt 704 
+Patt convertito 00000000000000000000001011000000
+NEED TO KILL 5 3 
+ innLayCheck = 5 
+Need to kill nITS 3 
+ngr 0 patt 896 
+Patt convertito 00000000000000000000001110000000
+NEED TO KILL 5 3 
+ innLayCheck = 5 
+Need to kill nITS 3 
+ngr 0 patt 448 
+Patt convertito 00000000000000000000000111000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1088 
+Patt convertito 00000000000000000000010001000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1152 
+Patt convertito 00000000000000000000010010000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 384 
+Patt convertito 00000000000000000000000110000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 640 
+Patt convertito 00000000000000000000001010000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 768 
+Patt convertito 00000000000000000000001100000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 576 
+Patt convertito 00000000000000000000001001000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 320 
+Patt convertito 00000000000000000000000101000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1280 
+Patt convertito 00000000000000000000010100000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 192 
+Patt convertito 00000000000000000000000011000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1536 
+Patt convertito 00000000000000000000011000000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1088 
+Patt convertito 00000000000000000000010001000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1152 
+Patt convertito 00000000000000000000010010000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1088 
+Patt convertito 00000000000000000000010001000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 576 
+Patt convertito 00000000000000000000001001000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 3 
+ innLayCheck = 5 
+Need to kill nITS 3 
+ngr 0 patt 1216 
+Patt convertito 00000000000000000000010011000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 1088 
+Patt convertito 00000000000000000000010001000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 576 
+Patt convertito 00000000000000000000001001000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 1 
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 640 
+Patt convertito 00000000000000000000001010000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 3 
+ innLayCheck = 5 
+Need to kill nITS 3 
+ngr 0 patt 448 
+Patt convertito 00000000000000000000000111000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 320 
+Patt convertito 00000000000000000000000101000000
+NEED TO KILL 5 1 
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 576 
+Patt convertito 00000000000000000000001001000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 384 
+Patt convertito 00000000000000000000000110000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 192 
+Patt convertito 00000000000000000000000011000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 320 
+Patt convertito 00000000000000000000000101000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 576 
+Patt convertito 00000000000000000000001001000000
+NEED TO KILL 5 2 
+ innLayCheck = 5 
+Need to kill nITS 2 
+ngr 0 patt 192 
+Patt convertito 00000000000000000000000011000000
+NEED TO KILL 4 5 
+ innLayCheck = 4 
+Need to kill nITS 5 
+ngr 0 patt 992 
+Patt convertito 00000000000000000000001111100000
+NEED TO KILL 4 4 
+ innLayCheck = 4 
+Need to kill nITS 4 
+ngr 0 patt 864 
+Patt convertito 00000000000000000000001101100000
+NEED TO KILL 4 4 
+ innLayCheck = 4 
+Need to kill nITS 4 
+ngr 0 patt 736 
+Patt convertito 00000000000000000000001011100000
+NEED TO KILL 4 4 
+ innLayCheck = 4 
+Need to kill nITS 4 
+ngr 0 patt 928 
+Patt convertito 00000000000000000000001110100000
+NEED TO KILL 4 4 
+ innLayCheck = 4 
+Need to kill nITS 4 
+ngr 0 patt 480 
+Patt convertito 00000000000000000000000111100000
+NEED TO KILL 4 4 
+ innLayCheck = 4 
+Need to kill nITS 4 
+ngr 0 patt 960 
+Patt convertito 00000000000000000000001111000000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 672 
+Patt convertito 00000000000000000000001010100000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 800 
+Patt convertito 00000000000000000000001100100000
+NEED TO KILL 4 4 
+ innLayCheck = 4 
+Need to kill nITS 4 
+ngr 0 patt 480 
+Patt convertito 00000000000000000000000111100000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 416 
+Patt convertito 00000000000000000000000110100000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 608 
+Patt convertito 00000000000000000000001001100000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 832 
+Patt convertito 00000000000000000000001101000000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 704 
+Patt convertito 00000000000000000000001011000000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 896 
+Patt convertito 00000000000000000000001110000000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 352 
+Patt convertito 00000000000000000000000101100000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 448 
+Patt convertito 00000000000000000000000111000000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 224 
+Patt convertito 00000000000000000000000011100000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 1120 
+Patt convertito 00000000000000000000010001100000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 1216 
+Patt convertito 00000000000000000000010011000000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 416 
+Patt convertito 00000000000000000000000110100000
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 448 
+Patt convertito 00000000000000000000000111000000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 224 
+Patt convertito 00000000000000000000000011100000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 352 
+Patt convertito 00000000000000000000000101100000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 4 3 
+ innLayCheck = 4 
+Need to kill nITS 3 
+ngr 0 patt 224 
+Patt convertito 00000000000000000000000011100000
+NEED TO KILL 4 2 
+NEED TO KILL 4 2 
+NEED TO KILL 3 6 
+ innLayCheck = 3 
+Need to kill nITS 6 
+ngr 0 patt 1008 
+Patt convertito 00000000000000000000001111110000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 880 
+Patt convertito 00000000000000000000001101110000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 992 
+Patt convertito 00000000000000000000001111100000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 752 
+Patt convertito 00000000000000000000001011110000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 944 
+Patt convertito 00000000000000000000001110110000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 496 
+Patt convertito 00000000000000000000000111110000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 976 
+Patt convertito 00000000000000000000001111010000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 864 
+Patt convertito 00000000000000000000001101100000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 688 
+Patt convertito 00000000000000000000001010110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 432 
+Patt convertito 00000000000000000000000110110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 848 
+Patt convertito 00000000000000000000001101010000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 816 
+Patt convertito 00000000000000000000001100110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 736 
+Patt convertito 00000000000000000000001011100000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 928 
+Patt convertito 00000000000000000000001110100000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 368 
+Patt convertito 00000000000000000000000101110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 240 
+Patt convertito 00000000000000000000000011110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 624 
+Patt convertito 00000000000000000000001001110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 480 
+Patt convertito 00000000000000000000000111100000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 720 
+Patt convertito 00000000000000000000001011010000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 912 
+Patt convertito 00000000000000000000001110010000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 960 
+Patt convertito 00000000000000000000001111000000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 464 
+Patt convertito 00000000000000000000000111010000
+NEED TO KILL 3 5 
+ innLayCheck = 3 
+Need to kill nITS 5 
+ngr 0 patt 496 
+Patt convertito 00000000000000000000000111110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 1136 
+Patt convertito 00000000000000000000010001110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 480 
+Patt convertito 00000000000000000000000111100000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 464 
+Patt convertito 00000000000000000000000111010000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 240 
+Patt convertito 00000000000000000000000011110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 432 
+Patt convertito 00000000000000000000000110110000
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 368 
+Patt convertito 00000000000000000000000101110000
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 4 
+ innLayCheck = 3 
+Need to kill nITS 4 
+ngr 0 patt 240 
+Patt convertito 00000000000000000000000011110000
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 3 3 
+NEED TO KILL 2 7 
+ innLayCheck = 2 
+Need to kill nITS 7 
+ngr 0 patt 1016 
+Patt convertito 00000000000000000000001111111000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 888 
+Patt convertito 00000000000000000000001101111000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 952 
+Patt convertito 00000000000000000000001110111000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 760 
+Patt convertito 00000000000000000000001011111000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 1000 
+Patt convertito 00000000000000000000001111101000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 1008 
+Patt convertito 00000000000000000000001111110000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 984 
+Patt convertito 00000000000000000000001111011000
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 504 
+Patt convertito 00000000000000000000000111111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 856 
+Patt convertito 00000000000000000000001101011000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 824 
+Patt convertito 00000000000000000000001100111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 248 
+Patt convertito 00000000000000000000000011111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 872 
+Patt convertito 00000000000000000000001101101000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 880 
+Patt convertito 00000000000000000000001101110000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 376 
+Patt convertito 00000000000000000000000101111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 632 
+Patt convertito 00000000000000000000001001111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 696 
+Patt convertito 00000000000000000000001010111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 992 
+Patt convertito 00000000000000000000001111100000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 936 
+Patt convertito 00000000000000000000001110101000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 752 
+Patt convertito 00000000000000000000001011110000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 920 
+Patt convertito 00000000000000000000001110011000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 944 
+Patt convertito 00000000000000000000001110110000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 744 
+Patt convertito 00000000000000000000001011101000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 440 
+Patt convertito 00000000000000000000000110111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 496 
+Patt convertito 00000000000000000000000111110000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 728 
+Patt convertito 00000000000000000000001011011000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 488 
+Patt convertito 00000000000000000000000111101000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 976 
+Patt convertito 00000000000000000000001111010000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 968 
+Patt convertito 00000000000000000000001111001000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 472 
+Patt convertito 00000000000000000000000111011000
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 6 
+ innLayCheck = 2 
+Need to kill nITS 6 
+ngr 0 patt 504 
+Patt convertito 00000000000000000000000111111000
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 472 
+Patt convertito 00000000000000000000000111011000
+NEED TO KILL 2 4 
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 248 
+Patt convertito 00000000000000000000000011111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 1144 
+Patt convertito 00000000000000000000010001111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 376 
+Patt convertito 00000000000000000000000101111000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 440 
+Patt convertito 00000000000000000000000110111000
+NEED TO KILL 2 4 
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 488 
+Patt convertito 00000000000000000000000111101000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 496 
+Patt convertito 00000000000000000000000111110000
+NEED TO KILL 2 5 
+ innLayCheck = 2 
+Need to kill nITS 5 
+ngr 0 patt 248 
+Patt convertito 00000000000000000000000011111000
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 2 4 
+NEED TO KILL 1 8 
+ innLayCheck = 1 
+Need to kill nITS 8 
+ngr 0 patt 1020 
+Patt convertito 00000000000000000000001111111100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 892 
+Patt convertito 00000000000000000000001101111100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 956 
+Patt convertito 00000000000000000000001110111100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 1004 
+Patt convertito 00000000000000000000001111101100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 764 
+Patt convertito 00000000000000000000001011111100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 988 
+Patt convertito 00000000000000000000001111011100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 1012 
+Patt convertito 00000000000000000000001111110100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 860 
+Patt convertito 00000000000000000000001101011100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 828 
+Patt convertito 00000000000000000000001100111100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 508 
+Patt convertito 00000000000000000000000111111100
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 1016 
+Patt convertito 00000000000000000000001111111000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 876 
+Patt convertito 00000000000000000000001101101100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 884 
+Patt convertito 00000000000000000000001101110100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 380 
+Patt convertito 00000000000000000000000101111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 636 
+Patt convertito 00000000000000000000001001111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 888 
+Patt convertito 00000000000000000000001101111000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 252 
+Patt convertito 00000000000000000000000011111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 700 
+Patt convertito 00000000000000000000001010111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 940 
+Patt convertito 00000000000000000000001110101100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 924 
+Patt convertito 00000000000000000000001110011100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 748 
+Patt convertito 00000000000000000000001011101100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 996 
+Patt convertito 00000000000000000000001111100100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 948 
+Patt convertito 00000000000000000000001110110100
+NEED TO KILL 1 5 
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 756 
+Patt convertito 00000000000000000000001011110100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 444 
+Patt convertito 00000000000000000000000110111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 732 
+Patt convertito 00000000000000000000001011011100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 492 
+Patt convertito 00000000000000000000000111101100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 952 
+Patt convertito 00000000000000000000001110111000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 972 
+Patt convertito 00000000000000000000001111001100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 980 
+Patt convertito 00000000000000000000001111010100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 760 
+Patt convertito 00000000000000000000001011111000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 1000 
+Patt convertito 00000000000000000000001111101000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 1008 
+Patt convertito 00000000000000000000001111110000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 476 
+Patt convertito 00000000000000000000000111011100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 500 
+Patt convertito 00000000000000000000000111110100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 984 
+Patt convertito 00000000000000000000001111011000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 504 
+Patt convertito 00000000000000000000000111111000
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 7 
+ innLayCheck = 1 
+Need to kill nITS 7 
+ngr 0 patt 508 
+Patt convertito 00000000000000000000000111111100
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 476 
+Patt convertito 00000000000000000000000111011100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 252 
+Patt convertito 00000000000000000000000011111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 444 
+Patt convertito 00000000000000000000000110111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 380 
+Patt convertito 00000000000000000000000101111100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 492 
+Patt convertito 00000000000000000000000111101100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 504 
+Patt convertito 00000000000000000000000111111000
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 500 
+Patt convertito 00000000000000000000000111110100
+NEED TO KILL 1 6 
+ innLayCheck = 1 
+Need to kill nITS 6 
+ngr 0 patt 252 
+Patt convertito 00000000000000000000000011111100
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+NEED TO KILL 1 5 
+evento 0 Macro: numhits 8, num fake 8.000000 
+Macro: getInnerLayerCheck 1 
+Bit patt :00000000000000000000001111111100

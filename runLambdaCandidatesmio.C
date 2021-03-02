@@ -105,7 +105,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
       hLambday=hLambdabary;
     }
   }*/
- TFile *fntupla = new TFile("ntuplaMoreLayerconBKG.root", "recreate");
+ TFile *fntupla = new TFile("ntuplastandNoBKG.root", "recreate");
 	float variable[31];
 	TNtuple *nt = new	TNtuple("nt","Variablesforperformance","nfaketrkprot:nfaketrkpion:ygen:xP:yP:zP:Vxgen:Vygen:Vzgen:massinvrec:pxgenprot:pygenprot:pzgenprot:pxgenpion:pygenpion:pzgenpion:dca:chi2prot:chi2ITSprot:chi2pion:chi2ITSpion:pxrecprot:pyrecprot:pzrecprot:pxrecpion:pyrecpion:pzrecpion:massinvswitch:pxlambda:pylambda:pzlambda");
 
@@ -119,7 +119,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   TH2F *hyPiP = new TH2F("hyPiP", "y pions vs y Protons from Lambda decays", 50, 0., 5., 50, 0., 5.);
  
   
-  TFile *fout = new TFile("LambdaMoreLayerconBKG-Signal-histos.root", "recreate");
+  TFile *fout = new TFile("LambdastandNoBKG-Signal-histos.root", "recreate");
   
   //int outN = nev/10;
   //if (outN<1) outN=1;
@@ -127,10 +127,10 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 //_____________________________SETUP SPERIMENTALE
   KMCDetectorFwd *det = new KMCDetectorFwd();
   det->ReadSetup(setup, setup);
-  det->InitBkg(Eint); //check modificare bkg su altro file
+  //det->InitBkg(Eint); //check modificare bkg su altro file
   det->ForceLastActiveLayer(det->GetLastActiveLayerITS()); // will not propagate beyond VT
-	det->SetMinITSHits(7);
-  //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
+	//det->SetMinITSHits(7);
+  det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+
 	//printf("num its HITS MIN MACRO %d", (det->GetNumberOfActiveLayersITS()));
   //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()-1); //NA60
   det->SetMinMSHits(0); //NA60+
@@ -423,8 +423,8 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 							nrec++;
 							nfake += trw->GetNFakeITSHits();
 							trw->GetPXYZ(pxyz);
-							//printf("_____numhits %d \n",trw->GetNITSHits());
-							//printf("getInnerLayerCheck %d \n",trw->GetInnerLayerChecked());
+							//printf("evento %d Macro: numhits %d \n",iev,trw->GetNITSHits());
+							//printf("Macro: getInnerLayerCheck %d \n",trw->GetInnerLayerChecked());
 						}
 					}
 				}
@@ -784,8 +784,9 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 				ntD0cand->Fill(arrnt);
 			}
 		}
+		//printf("fine evento %d \n",iev);
 	} //event loop
-  printf("count %d countrec %d \n",count, countrec);
+  //printf("count %d countrec %d \n",count, countrec);
   hMassAll->SetLineColor(kBlue);
   hMassAll->Draw();
   hMassAll->SetMinimum(0.1);

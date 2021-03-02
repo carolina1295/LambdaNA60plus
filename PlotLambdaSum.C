@@ -264,8 +264,13 @@ void PlotLambdaSum(){
 	TH1F *hPxpion = new TH1F("hPxpion", " Px pion", 200, -5., 5.);
 	TH1F *hPypion = new TH1F("hPypion", " Py pion", 200, -2., 2.);
 	TH1F *hPzpion = new TH1F("hPzpion", " Pz pion", 200, -1., 20.);
+	TH2F *hPzVsYprot = new TH2F("hPzVsYprot", "Pz vs Y proton ", 60, 0, 6, 200, -1, 60.);
+	TH2F *hPzVsYpion = new TH2F("hPzVsYpion", "Pz vs Y pion", 60, 0, 6, 200, -1, 60.);
+	TH2F *hPzprotVsPzLambda = new TH2F("hPzprotVsPzLambda", "Pz proton vs Pz Lambda  ", 200, -1, 60., 200, -1, 60.);
+	TH2F *hPzpionVsPzLambda = new TH2F("hPzpionVsPzLambda", "Pz pion vs Pz Lambda ", 200, -1, 60., 200, -1, 60.);
 
-	TH1F *htheta = new TH1F("htheta", " Angle between the particles", 200, 0., 7.);
+
+	TH1F *htheta = new TH1F("htheta", "Angle between the particles", 200, 0., 7.);
 
 	TH2F* hNfakeProtVsChi2 = new TH2F("hNfakeProtVsChi2", "NfakeProt vs Chi2", 6, -0.5, 5.5, 100, 0, 2);
 	TH2F* hNfakePionVsChi2 = new TH2F("hNfakePionVsChi2", "NfakePion vs Chi2", 6, -0.5, 5.5, 100, 0, 2);
@@ -277,6 +282,7 @@ void PlotLambdaSum(){
 	TH1F* hMassinrecnfakeprot5= new TH1F("hMassinrecnfakeprot5", "Massinv for 5 fake prot", 3000, 0,3);
 	TH1F* hDCAnfakeprot0 = new TH1F("hDCAnfakeprot0", "DCA for 0 fake prot", 100, 0,0.2);
 	TH1F* hDCAnfakeprot4 = new TH1F("hDCAnfakeprot4", "DCA for 4 fake prot", 100, 0,0.1);
+
 
 	TH2F *hLzrecVsLzgen = new TH2F("hLzrecVsLzgen", "Lz rec vs Lz gen", 200, 0, 60, 200, 0, 60);
 	TH2F *hDeltaLzVsLzgen = new TH2F("hDeltaLzVsLzgen", "#Delta Lz vs Lz gen", 200, 0, 60, 600, -1, 1);
@@ -315,7 +321,7 @@ void PlotLambdaSum(){
 		variables->SetBranchAddress("massinvswitch",&massinvSwitch);
 		variables->SetBranchAddress("pxlambda",&pGenLambda[0]);
 		variables->SetBranchAddress("pylambda",&pGenLambda[1]);
-		variables->SetBranchAddress("pzlambda",&pGenLambda[0]);
+		variables->SetBranchAddress("pzlambda",&pGenLambda[2]);
 
 	int events=variables->GetEntries();
 	double theta=0;
@@ -325,7 +331,7 @@ void PlotLambdaSum(){
     	double residVy=10000.*(yrec - secvertgenProt[1]);
     	double residVz=10000.*(zrec - secvertgenProt[2]);
 		if(zrec<=20.){
-			hMassinreczP->Fill(massinvrec, zrec);
+			
 			hNfakeVszP->Fill(nfaketrkprot, zrec);
 			}
 		double p1abs=sqrt(pRecProt[0]*pRecProt[0]+pRecProt[1]*pRecProt[1]+pRecProt[2]*pRecProt[2]);
@@ -343,16 +349,19 @@ void PlotLambdaSum(){
 			//hDeltaLzVsLzgen->Fill(secvertgenProt[2],zrec-secvertgenProt[2]);
 		
 		if(nfaketrkprot == 0 && nfaketrkpion == 0) {
+			if(zrec<=20.){
+				hMassinreczP->Fill(massinvrec, zrec);
+				}
 			hMassinrecY0fake->Fill(massinvrec, y);
 			hMassinrecSwitchY0fake->Fill(massinvSwitch, y);
 			//Resolution on P
-			hResPxVsYpionRel->Fill((pRecPion[0]-pGenPion[0])/pRecPion[0],y);
-			hResPyVsYpionRel->Fill((pRecPion[1]-pGenPion[1])/pRecPion[1],y);
-			hResPzVsYpionRel->Fill((pRecPion[2]-pGenPion[2])/pRecPion[2],y);
+			hResPxVsYpionRel->Fill((pRecPion[0]-pGenPion[0])/pGenPion[0],y);
+			hResPyVsYpionRel->Fill((pRecPion[1]-pGenPion[1])/pGenPion[1],y);
+			hResPzVsYpionRel->Fill((pRecPion[2]-pGenPion[2])/pGenPion[2],y);
 
-			hResPxVsYprotRel->Fill((pRecProt[0]-pGenProt[0])/pRecProt[0],y);
-			hResPyVsYprotRel->Fill((pRecProt[1]-pGenProt[1])/pRecProt[1],y);
-			hResPzVsYprotRel->Fill((pRecProt[2]-pGenProt[2])/pRecProt[2],y);
+			hResPxVsYprotRel->Fill((pRecProt[0]-pGenProt[0])/pGenProt[0],y);
+			hResPyVsYprotRel->Fill((pRecProt[1]-pGenProt[1])/pGenProt[1],y);
+			hResPzVsYprotRel->Fill((pRecProt[2]-pGenProt[2])/pGenProt[2],y);
 
 			hResPxVsLzprot->Fill(pRecProt[0]-pGenProt[0],zrec);
 			hResPyVsLzprot->Fill(pRecProt[1]-pGenProt[1],zrec);
@@ -366,12 +375,20 @@ void PlotLambdaSum(){
 			hResPyVsLzpion->Fill(pRecPion[1]-pGenPion[1],zrec);
 			hResPzVsLzpion->Fill(pRecPion[2]-pGenPion[2],zrec);
 
+
+			hPzVsYpion->Fill(y,pRecPion[2]);
+			hPzVsYprot->Fill(y,pRecProt[2]);
+
+			hPzprotVsPzLambda->Fill(pGenProt[2],pGenLambda[2]);
+			hPzpionVsPzLambda->Fill(pGenPion[2],pGenLambda[2]);
+
 			hPxprot->Fill(pRecProt[0]);
 			hPyprot->Fill(pRecProt[1]);
 			hPzprot->Fill(pRecProt[2]);
 			hPxpion->Fill(pRecPion[0]);
 			hPypion->Fill(pRecPion[1]);
 			hPzpion->Fill(pRecPion[2]);
+
 
 			//Resolution on Vertex
 			hResVxVsY->Fill(residVx, y);
@@ -428,27 +445,27 @@ void PlotLambdaSum(){
 		variablesBar->SetBranchAddress("Vygen",&secvertgenProtBar[1]);
 		variablesBar->SetBranchAddress("Vzgen",&secvertgenProtBar[2]);
 		variablesBar->SetBranchAddress("massinvrec",&massinvrecBar);
-		variables->SetBranchAddress("pxgenprot",&pGenProtBar[0]);
-		variables->SetBranchAddress("pygenprot",&pGenProtBar[1]);
-		variables->SetBranchAddress("pzgenprot",&pGenProtBar[2]);
-		variables->SetBranchAddress("pxgenpion",&pGenPionBar[0]);
-		variables->SetBranchAddress("pygenpion",&pGenPionBar[1]);
-		variables->SetBranchAddress("pzgenpion",&pGenPionBar[2]);
+		variablesBar->SetBranchAddress("pxgenprot",&pGenProtBar[0]);
+		variablesBar->SetBranchAddress("pygenprot",&pGenProtBar[1]);
+		variablesBar->SetBranchAddress("pzgenprot",&pGenProtBar[2]);
+		variablesBar->SetBranchAddress("pxgenpion",&pGenPionBar[0]);
+		variablesBar->SetBranchAddress("pygenpion",&pGenPionBar[1]);
+		variablesBar->SetBranchAddress("pzgenpion",&pGenPionBar[2]);
 		variablesBar->SetBranchAddress("dca",&dcaBar);
-		variables->SetBranchAddress("chi2prot",&chi2protBar);
-		variables->SetBranchAddress("chi2ITSprot",&chi2ITSprotBar);
-		variables->SetBranchAddress("chi2pion",&chi2pionBar);
-		variables->SetBranchAddress("chi2ITSpion",&chi2ITSpionBar);
-		variables->SetBranchAddress("pxrecprot",&pRecProtBar[0]);
-		variables->SetBranchAddress("pyrecprot",&pRecProtBar[1]);
-		variables->SetBranchAddress("pzrecprot",&pRecProtBar[2]);
-		variables->SetBranchAddress("pxrecpion",&pRecPionBar[0]);
-		variables->SetBranchAddress("pyrecpion",&pRecPionBar[1]);
-		variables->SetBranchAddress("pzrecpion",&pRecPionBar[2]);
-		variables->SetBranchAddress("massinvswitch",&massinvSwitchBar);
-		variables->SetBranchAddress("pxlambda",&pGenLambdaBar[0]);
-		variables->SetBranchAddress("pylambda",&pGenLambdaBar[1]);
-		variables->SetBranchAddress("pzlambda",&pGenLambdaBar[0]);
+		variablesBar->SetBranchAddress("chi2prot",&chi2protBar);
+		variablesBar->SetBranchAddress("chi2ITSprot",&chi2ITSprotBar);
+		variablesBar->SetBranchAddress("chi2pion",&chi2pionBar);
+		variablesBar->SetBranchAddress("chi2ITSpion",&chi2ITSpionBar);
+		variablesBar->SetBranchAddress("pxrecprot",&pRecProtBar[0]);
+		variablesBar->SetBranchAddress("pyrecprot",&pRecProtBar[1]);
+		variablesBar->SetBranchAddress("pzrecprot",&pRecProtBar[2]);
+		variablesBar->SetBranchAddress("pxrecpion",&pRecPionBar[0]);
+		variablesBar->SetBranchAddress("pyrecpion",&pRecPionBar[1]);
+		variablesBar->SetBranchAddress("pzrecpion",&pRecPionBar[2]);
+		variablesBar->SetBranchAddress("massinvswitch",&massinvSwitchBar);
+		variablesBar->SetBranchAddress("pxlambda",&pGenLambdaBar[0]);
+		variablesBar->SetBranchAddress("pylambda",&pGenLambdaBar[1]);
+		variablesBar->SetBranchAddress("pzlambda",&pGenLambdaBar[2]);
 
 	int eventsBar=variablesBar->GetEntries();
 
@@ -458,7 +475,7 @@ void PlotLambdaSum(){
 		double residVyBar=10000.*(yrecBar - secvertgenProtBar[1]);
 		double residVzBar=10000.*(zrecBar - secvertgenProtBar[2]);
 		if(zrecBar<=20.){
-			hMassinreczP->Fill(massinvrecBar, zrecBar);
+			
 			hNfakeVszP->Fill(nfaketrkprotBar, zrecBar);
 		}
 		double p1absBar=sqrt(pRecProtBar[0]*pRecProtBar[0]+pRecProtBar[1]*pRecProtBar[1]+pRecProtBar[2]*pRecProtBar[2]);
@@ -476,17 +493,20 @@ void PlotLambdaSum(){
 		//hDeltaLzVsLzgen->Fill(secvertgenProtBar[2],zrecBar-secvertgenProtBar[2]);
 
 		if(nfaketrkprotBar == 0 && nfaketrkpionBar == 0) {
+					if(zrecBar<=20.){
+			hMassinreczP->Fill(massinvrecBar, zrecBar);
+					}
 			hMassinrecY0fake->Fill(massinvrecBar, yBar);
 			hMassinrecSwitchY0fake->Fill(massinvSwitchBar, yBar);
 
 			//Resolution on P
-			hResPxVsYpionRel->Fill((pRecPionBar[0]-pGenPionBar[0])/pRecPionBar[0],yBar);
-			hResPyVsYpionRel->Fill((pRecPionBar[1]-pGenPionBar[1])/pRecPionBar[1],yBar);
-			hResPzVsYpionRel->Fill((pRecPionBar[2]-pGenPionBar[2])/pRecPionBar[2],yBar);
+			hResPxVsYpionRel->Fill((pRecPionBar[0]-pGenPionBar[0])/pGenPionBar[0],yBar);
+			hResPyVsYpionRel->Fill((pRecPionBar[1]-pGenPionBar[1])/pGenPionBar[1],yBar);
+			hResPzVsYpionRel->Fill((pRecPionBar[2]-pGenPionBar[2])/pGenPionBar[2],yBar);
 
-			hResPxVsYprotRel->Fill((pRecProtBar[0]-pGenProtBar[0])/pRecProtBar[0],yBar);
-			hResPyVsYprotRel->Fill((pRecProtBar[1]-pGenProtBar[1])/pRecProtBar[1],yBar);
-			hResPzVsYprotRel->Fill((pRecProtBar[2]-pGenProtBar[2])/pRecProtBar[2],yBar);
+			hResPxVsYprotRel->Fill((pRecProtBar[0]-pGenProtBar[0])/pGenProtBar[0],yBar);
+			hResPyVsYprotRel->Fill((pRecProtBar[1]-pGenProtBar[1])/pGenProtBar[1],yBar);
+			hResPzVsYprotRel->Fill((pRecProtBar[2]-pGenProtBar[2])/pGenProtBar[2],yBar);
 
 			hResPxVsLzprot->Fill(pRecProtBar[0]-pGenProtBar[0],zrecBar);
 			hResPyVsLzprot->Fill(pRecProtBar[1]-pGenProtBar[1],zrecBar);
@@ -501,6 +521,12 @@ void PlotLambdaSum(){
 			hResPxVsYpion->Fill(pRecPionBar[0]-pGenPionBar[0],yBar);
 			hResPyVsYpion->Fill(pRecPionBar[1]-pGenPionBar[1],yBar);
 			hResPzVsYpion->Fill(pRecPionBar[2]-pGenPionBar[2],yBar);
+
+			hPzVsYpion->Fill(yBar,pRecPionBar[2]);
+			hPzVsYprot->Fill(yBar,pRecProtBar[2]);
+
+			hPzprotVsPzLambda->Fill(pGenLambdaBar[2],pGenProtBar[2]);
+			hPzpionVsPzLambda->Fill(pGenLambdaBar[2],pGenPionBar[2]);
 		
 			hPxprot->Fill(pRecProtBar[0]);
 			hPyprot->Fill(pRecProtBar[1]);
@@ -551,7 +577,17 @@ void PlotLambdaSum(){
 	}
 	
 	filinBar.Close();	
-	
+
+	hPzVsYpion->GetYaxis()->SetTitle("Pz_{rec}(#frac{GeV}{c})");
+	hPzVsYpion->GetXaxis()->SetTitle("y");
+	hPzVsYprot->GetYaxis()->SetTitle("Pz_{rec}(#frac{GeV}{c})");
+	hPzVsYprot->GetXaxis()->SetTitle("y");
+
+	hPzpionVsPzLambda->GetYaxis()->SetTitle("Pz_{gen} #pi (#frac{GeV}{c})");
+	hPzpionVsPzLambda->GetXaxis()->SetTitle("Pz_{gen} #Lambda(#frac{GeV}{c})");
+	hPzprotVsPzLambda->GetYaxis()->SetTitle("Pz_{gen} p (#frac{GeV}{c})");
+	hPzprotVsPzLambda->GetXaxis()->SetTitle("Pz_{gen} #Lambda(#frac{GeV}{c})");
+
 	foutLambda->cd();
 	hNfakeVszP->Write();
 	hMassinrecnfakeprot0->Write();
@@ -566,12 +602,14 @@ void PlotLambdaSum(){
 	hMassinrecSwitchY->Write();
 	hMassinrecY0fake->Write();
 	hMassinrecSwitchY0fake->Write();
+
 	hResVxVsY->Write();
   	hResVyVsY->Write();
   	hResVzVsY->Write();
 	hResVxVsLz->Write();
   	hResVyVsLz->Write();
   	hResVzVsLz->Write();
+
 	hResPxVsLzprot->Write();
 	hResPyVsLzprot->Write();
 	hResPxVsLzpion->Write();
@@ -585,6 +623,13 @@ void PlotLambdaSum(){
 	hResPyVsYpion->Write();
 	hResPzVsYprot->Write();
 	hResPzVsYpion->Write();
+
+	hPzVsYprot->Write();
+	hPzVsYpion->Write();
+
+	hPzprotVsPzLambda->Write();
+	hPzpionVsPzLambda->Write();
+
 	hMassinreczP->Write();
 
 	hResPxVsYpionRel->Write();
@@ -612,18 +657,26 @@ void PlotLambdaSum(){
 
 	TH1D* hInvMass0fake=(TH1D *)hMassinrecY0fake->ProjectionX();
 	hInvMass0fake->SetDirectory(0);
-	//new TCanvas();
 	hInvMass0fake->SetLineColor(2);
+
+	TCanvas *inv=new TCanvas("inv");
+	hInvMass0fake->SetTitle("Invariant mass with 0 fake");
+	hInvMass0fake->GetXaxis()->SetTitle("Mass (#frac{GeV}{c^{2}})");
+	hInvMass0fake->GetYaxis()->SetTitle("Counts");
+	hInvMass0fake->GetXaxis()->SetRangeUser(1,1.2);
+	hInvMass0fake->Draw();
 	
 	TH1D* hInvMassSwitch0fake=(TH1D *)hMassinrecSwitchY0fake->ProjectionX();
 	hInvMassSwitch0fake->SetDirectory(0);
-	
-//new TCanvas();
-	//hInvMassSwitch0fake->Draw();
-//hInvMass0fake->Draw();
+	TCanvas *invSwap=new TCanvas("InvSwap");
+	hInvMassSwitch0fake->SetTitle("Invariant mass swap with 0 fake");
+	hInvMassSwitch0fake->GetXaxis()->SetTitle("Mass (#frac{GeV}{c^{2}})");
+	hInvMassSwitch0fake->GetYaxis()->SetTitle("Counts");
+	hInvMassSwitch0fake->Draw();
 
 
-	/*TH1D* MassInvProjswap[27];
+
+	TH1D* MassInvProjswap[27];
 	TH1D*  MassInvProj[27];
 	TCanvas* cSwap=new TCanvas("cSwap");
 	int count=0;
@@ -662,16 +715,47 @@ void PlotLambdaSum(){
 	hsumSwap->SetDirectory(0);
 	hsum->SetDirectory(0);
 	new TCanvas();
+	hsumSwap->SetTitle("Invariant mass swap with fake");
+	hsumSwap->GetXaxis()->SetTitle("Mass (#frac{GeV}{c^{2}})");
+	hsumSwap->GetYaxis()->SetTitle("Counts");
 	hsumSwap->Draw();
 	new TCanvas();
+	hsum->SetTitle("Invariant mass with fake");
+	hsum->GetXaxis()->SetTitle("Mass (#frac{GeV}{c^{2}})");
+	hsum->GetYaxis()->SetTitle("Counts");
 	hsum->Draw();
 
 	new TCanvas();
 	hsumSwap->Draw();
+
 	hsum->Draw("same");
-*/
+
+
+	//Projection for checking Pz resoluztion of pion
+
+	/*int totvalue=7;
+	double meanPz[7]={0.}, RMSPz[7]={0.}, meanErrPz[7]={0.}, RMSErrPz[7]={0.}, yRange[7]={0.};
+	TH1D* hProjReszY[7];
+	double jrange=0.;
+	for(int i=0;i<totvalue;i++){
+		hProjReszY[i]=hResol->ProjectionX((Form("Res Pz with y range [%f %f]",jrange,jrange+1)), hResol->GetYaxis()->FindBin(jrange+0.01),hResol->GetYaxis()->FindBin(jrange+0.99));
+		meanPz[i]=hProjResyLz[i]->GetMean();
+		RMSPz[i]=hProjResyLz[i]->GetRMS();
+		meanErrPz[i]=hProjResyLz[i]->GetMeanError();
+		RMSErrPz[i]=hProjResyLz[i]->GetRMSError();
+		yRange[i]=(jrange+jrange+1)/2.;
+		hProjReszY[i]->SetDirectory(0);
+		new TCanvas();
+		hProjReszY[i]->Draw();
+		jrange=jrange+1;
+		}*/
+		
+	ProjectionResolCorrPy(hPzVsYprot,1,"Pz Prot");
+	ProjectionResolCorrPy(hPzVsYpion,1,"Pz Pion");
+
+
 	TCanvas* c1=new TCanvas("c1");
-	ProjectionforBinMassInv(hMassinrecY, "#Lambda+#bar{#Lambda} Inv Mass vs Y", "Y", c1, foutLambda);
+	ProjectionforBinMassInv(hMassinrecY0fake, "#Lambda+#bar{#Lambda} Inv Mass vs Y", "Y", c1, foutLambda);
 
 	TCanvas* c2p=new TCanvas("c2p");
 	ProjectionforBin(hResPxVsYprot ,"#Lambda+#bar{#Lambda} ResPx vs Y prot", "Y", c2p, foutLambda);
@@ -938,8 +1022,53 @@ void PlotLambdaSum(){
 	ProjectionforBin(hResVyVsLz, "#Lambda+#bar{#Lambda} ResY vs Lz", "Lz", c6, foutLambda);
 	TCanvas* c7=new TCanvas("c7");
 	ProjectionforBin(hResVzVsLz, "#Lambda+#bar{#Lambda} ResZ vs Lz", "Lz", c7, foutLambda);
+
+
+
+	TGraphErrors *VertVsy[3], *VertVsLz[3];
+	VertVsy[0]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResX vs Y");
+	VertVsy[1]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResY vs Y");
+	VertVsy[2]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResZ vs Y");
+	VertVsLz[0]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResX vs Lz");
+	VertVsLz[1]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResY vs Lz");
+	VertVsLz[2]=(TGraphErrors*)foutLambda->Get("Sigma#Lambda+#bar{#Lambda} ResZ vs Lz");
+
+	TCanvas *cVy = new TCanvas("cVy");
+	cVy->Divide(3,1);
+	TCanvas *cVLz = new TCanvas("cVLz");
+	cVLz->Divide(3,1);
+	VertVsy[0]->SetTitle("Resolution on V_{x} vs y");
+	VertVsy[1]->SetTitle("Resolution on V_{y} vs y");
+	VertVsy[2]->SetTitle("Resolution on V_{z} vs y");
+
+	VertVsLz[0]->SetTitle("Resolution on V_{x} vs Lz");
+	VertVsLz[1]->SetTitle("Resolution on V_{y} vs Lz");
+	VertVsLz[2]->SetTitle("Resolution on V_{z} vs Lz");
+	for(int i=0;i<3;i++){
+		cVy->cd(i+1);
+		gPad->SetGrid();
+		VertVsy[i]->SetMarkerStyle(20);
+		VertVsy[i]->SetMarkerColor(4);
+		VertVsy[i]->SetMarkerSize(0.8);
+		VertVsy[i]->GetXaxis()->SetTitle("y");
+		VertVsy[i]->GetYaxis()->SetTitle("#sigma (#mum) ");
+		VertVsy[i]->Draw();
+		cVLz->cd(i+1);
+		gPad->SetGrid();
+		VertVsLz[i]->SetMarkerStyle(20);
+		VertVsLz[i]->SetMarkerColor(4);
+		VertVsLz[i]->SetMarkerSize(0.8);
+		VertVsLz[i]->GetXaxis()->SetTitle("Lz (cm)");
+		VertVsLz[i]->GetYaxis()->SetTitle("#sigma (#mum) ");
+		VertVsLz[i]->Draw();
+	} 
 	
 	hLambda->Close();
+	hLambdaBar->Close();
+	hPion->Close();
+	hProt->Close();
+	hAntiProt->Close();
+	hPionpos->Close();
 	hD0->Close();
 	foutLambda->Close();
 
@@ -976,35 +1105,33 @@ void Projection(TH2F* h2D,  int range, bool rapidity, char *name ){
 
 
 void ProjectionResolCorrPy(TH2F* hResol, bool rapid, char *title){
-	int totvalue=10;
+	int totvalue=4;
 	double meanPy[10]={0.}, RMSPy[10]={0.}, meanErrPy[10]={0.}, RMSErrPy[10]={0.}, Lzrange[10]={0.};
 	TH1D* hProjResyLz[10];
-	double jrange=0.;
-	if(rapid==1){
-		jrange=1;
-		totvalue=4;
-	}
+	double jrange=1.;
+
 	for(int i=0;i<totvalue;i++){
-		hProjResyLz[i]=hResol->ProjectionY((Form("Res Py Lz range [%f %f]",jrange,jrange+1)), hResol->GetXaxis()->FindBin(jrange+0.01),hResol->GetXaxis()->FindBin(jrange+0.99));
+		hProjResyLz[i]=hResol->ProjectionY((Form("Pz with y range [%f %f]",jrange,jrange+1)), hResol->GetXaxis()->FindBin(jrange+0.01),hResol->GetXaxis()->FindBin(jrange+0.99));
 		meanPy[i]=hProjResyLz[i]->GetMean();
 		RMSPy[i]=hProjResyLz[i]->GetRMS();
 		meanErrPy[i]=hProjResyLz[i]->GetMeanError();
 		RMSErrPy[i]=hProjResyLz[i]->GetRMSError();
 		Lzrange[i]=(jrange+jrange+1)/2.;
 		hProjResyLz[i]->SetDirectory(0);
-		new TCanvas();
-		hProjResyLz[i]->Draw();
+		hProjResyLz[i]->SetTitle(Form(" %s in y range [%f %f] ",title,jrange,jrange+1));
+		//new TCanvas();
+		//hProjResyLz[i]->Draw();
 		jrange=jrange+1;
 		}
 	if(rapid==0){
 		TGraphErrors* grResy = new TGraphErrors(totvalue,Lzrange,meanPy,0,meanErrPy);
 		grResy->SetTitle(Form("Mean %s  ", title));
-		new TCanvas();
-		grResy->Draw("AC*");
+		//new TCanvas();
+		//grResy->Draw("AC*");
 		TGraphErrors* grRMSy = new TGraphErrors(totvalue,Lzrange,RMSPy,0,RMSErrPy);
 		grRMSy->SetTitle(Form("RMS %s  ",title));
-		new TCanvas();
-		grRMSy->Draw("AC*");
+		//new TCanvas();
+		//grRMSy->Draw("AC*");
 			}
 	else{
 		TGraphErrors* grResyRapid = new TGraphErrors(totvalue,Lzrange,meanPy,0,meanErrPy);
@@ -1013,6 +1140,8 @@ void ProjectionResolCorrPy(TH2F* hResol, bool rapid, char *title){
 		//grResyRapid->Draw("AC*");
 		TGraphErrors* grRMSyRapid = new TGraphErrors(totvalue,Lzrange,RMSPy,0,RMSErrPy);
 		grRMSyRapid->SetTitle(Form("RMS %s ",title));
+		grRMSyRapid->GetXaxis()->SetTitle("y");
+		grRMSyRapid->GetYaxis()->SetTitle("RMS (#frac{GeV}{c})");
 		//new TCanvas();
 		//grRMSyRapid->Draw("AC*");
 		}
@@ -1044,7 +1173,7 @@ void ProjectionNfake(TH2F* hNfake, char *title){
 void ProjectionforBin(TH2F* hist2D, char* graphTitle , char* Xaxisname, TCanvas *c0, TFile *f){
 	double xaxis[100], mean[100], errmean[100], sigma[100], errsigma[100], sigmagaus[100], errsigmagaus[100];
 	int count=0, i=0, countGraph=0;
-  	c0->Divide(8,5);
+  	c0->Divide(10,5);
   	for(Int_t jj=1; jj<hist2D->GetNbinsY(); jj++){
 		TH1D *hInvMass = (TH1D *)hist2D->ProjectionX(Form("%sBin%d",hist2D->GetName(),jj), jj, jj);
 		if(hInvMass->GetSumOfWeights()>45){

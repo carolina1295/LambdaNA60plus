@@ -29,14 +29,19 @@
 #include "TMultiGraph.h"
 
 void efficiency(TH1F* hRec, TH1F* hMC, TH1F* hGen, char* xaxis, TFile *f);
+void efficiencyGen(TH3F *hMCGenRec[3],char* title, TFile* f);
 
 void EfficiencyLambda(){
     TFile *fLambda = new TFile("LambdastandconBKG-Signal-histos.root");
 	TFile *fLambdaBar = new TFile("LambdaBarstandconBKG-Signal-histos.root");
     TFile *fLambdaMoreLayer = new TFile("LambdaMoreLayerconBKG-Signal-histos.root");
 	TFile *fLambdaBarMoreLayer = new TFile("LambdaBarMoreLayerconBKG-Signal-histos.root");
-	//TFile *fLambdaMoreLayerBKG = new TFile("LambdaMoreLayerconBKG-Signal-histos.root");
-	//TFile *fLambdaBarMoreLayerBKG = new TFile("LambdaBarMoreLayerconBKG-Signal-histos.root");
+	TFile *fLambdaMoreLayer5NoBKG = new TFile("LambdaMoreLayer5NoBKG-Signal-histos.root");
+	TFile *fLambdaBarMoreLayer5NoBKG = new TFile("LambdaBarMoreLayer5NoBKG-Signal-histos.root");
+	TFile *fLambdaMoreLayer7NoBKG = new TFile("LambdaMoreLayer7NoBKG-Signal-histos.root");
+	TFile *fLambdaBarMoreLayer7NoBKG = new TFile("LambdaBarMoreLayer7NoBKG-Signal-histos.root");
+	TFile *fLambdaMoreLayer10NoBKG = new TFile("LambdaMoreLayer10NoBKG-Signal-histos.root");
+	TFile *fLambdaBarMoreLayer10NoBKG = new TFile("LambdaBarMoreLayer10NoBKG-Signal-histos.root");
 	TFile *fPion = new TFile("PION-Signal-histos.root");
 	TFile *fPionpos = new TFile("PIONpos-Signal-histos.root");
 	TFile *fProt = new TFile("PROTON-Signal-histos.root");
@@ -49,6 +54,7 @@ void EfficiencyLambda(){
     //Distribuzione 3D per efficienza
 	TH3F* hYPtLzMC[2], *hYPtLzGen[2], *hYPtLzRec[2] ;
 	 TH3F* hYPtLzGen0fake[2], *hYPtLzRec0fake[2] ;
+	
 	hYPtLzMC[0]=(TH3F*)fLambda->Get("hYPtLzMC");
 	hYPtLzGen[0]=(TH3F*)fLambda->Get("hYPtLzGen");
 	hYPtLzRec[0]=(TH3F*)fLambda->Get("hYPtLzRec");
@@ -106,6 +112,130 @@ void EfficiencyLambda(){
 			efficiency(hLzRec0fake[i],hLzMC[i],hLzGen0fake[i],"Lz #Lambda 10 layers 0fake",foutLambda);
 		}
 	}
+
+	TH3F* hYPtLz5NoBkg[3], *hYPtLz7NoBkg[3], *hYPtLz10NoBkg[3];
+	hYPtLz5NoBkg[0]=(TH3F*)fLambdaMoreLayer5NoBKG->Get("hYPtLzMC");
+	hYPtLz5NoBkg[1]=(TH3F*)fLambdaMoreLayer5NoBKG->Get("hYPtLzGen");
+	hYPtLz5NoBkg[2]=(TH3F*)fLambdaMoreLayer5NoBKG->Get("hYPtLzRec");
+	efficiencyGen(hYPtLz5NoBkg,"for minimum 5 hits", foutLambda);
+
+	hYPtLz7NoBkg[0]=(TH3F*)fLambdaMoreLayer7NoBKG->Get("hYPtLzMC");
+	hYPtLz7NoBkg[1]=(TH3F*)fLambdaMoreLayer7NoBKG->Get("hYPtLzGen");
+	hYPtLz7NoBkg[2]=(TH3F*)fLambdaMoreLayer7NoBKG->Get("hYPtLzRec");
+	efficiencyGen(hYPtLz7NoBkg,"for minimum 7 hits", foutLambda);
+
+	hYPtLz10NoBkg[0]=(TH3F*)fLambdaMoreLayer10NoBKG->Get("hYPtLzMC");
+	hYPtLz10NoBkg[1]=(TH3F*)fLambdaMoreLayer10NoBKG->Get("hYPtLzGen");
+	hYPtLz10NoBkg[2]=(TH3F*)fLambdaMoreLayer10NoBKG->Get("hYPtLzRec");
+	efficiencyGen(hYPtLz10NoBkg,"for minimum 10 hits", foutLambda);
+
+	TH3F* hYPtLz5NoBkgBar[3], *hYPtLz7NoBkgBar[3], *hYPtLz10NoBkgBar[3];
+	hYPtLz5NoBkgBar[0]=(TH3F*)fLambdaBarMoreLayer5NoBKG->Get("hYPtLzMC");
+	hYPtLz5NoBkgBar[1]=(TH3F*)fLambdaBarMoreLayer5NoBKG->Get("hYPtLzGen");
+	hYPtLz5NoBkgBar[2]=(TH3F*)fLambdaBarMoreLayer5NoBKG->Get("hYPtLzRec");
+	efficiencyGen(hYPtLz5NoBkgBar,"for minimum 5 hits Bar", foutLambda);
+
+	hYPtLz7NoBkgBar[0]=(TH3F*)fLambdaBarMoreLayer7NoBKG->Get("hYPtLzMC");
+	hYPtLz7NoBkgBar[1]=(TH3F*)fLambdaBarMoreLayer7NoBKG->Get("hYPtLzGen");
+	hYPtLz7NoBkgBar[2]=(TH3F*)fLambdaBarMoreLayer7NoBKG->Get("hYPtLzRec");
+	efficiencyGen(hYPtLz7NoBkgBar,"for minimum 7 hits Bar", foutLambda);
+
+	hYPtLz10NoBkgBar[0]=(TH3F*)fLambdaBarMoreLayer10NoBKG->Get("hYPtLzMC");
+	hYPtLz10NoBkgBar[1]=(TH3F*)fLambdaBarMoreLayer10NoBKG->Get("hYPtLzGen");
+	hYPtLz10NoBkgBar[2]=(TH3F*)fLambdaBarMoreLayer10NoBKG->Get("hYPtLzRec");
+	efficiencyGen(hYPtLz10NoBkgBar,"for minimum 10 hits Bar", foutLambda);
+
+	TH1F* h5eff[3], *h7eff[3], *h10eff[3], *h5effBar[3], *h7effBar[3], *h10effBar[3];
+	for(int j=0;j<3;j++){
+		if(j==0){
+		 	h5eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for y for minimum 5 hits");
+			h7eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for y for minimum 7 hits");
+			h10eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for y for minimum 10 hits");
+			h5effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for y for minimum 5 hits Bar");
+			h7effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for y for minimum 7 hits Bar");
+			h10effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for y for minimum 10 hits Bar");
+		}
+		if(j==1){
+            h5eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Pt for minimum 5 hits");
+			h7eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Pt for minimum 7 hits");
+			h10eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Pt for minimum 10 hits");
+			h5effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Pt for minimum 5 hits Bar");
+			h7effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Pt for minimum 7 hits Bar");
+			h10effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Pt for minimum 10 hits Bar");
+		}
+		if(j==2){
+            h5eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Lz for minimum 5 hits");
+			h7eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Lz for minimum 7 hits");
+			h10eff[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Lz for minimum 10 hits");
+			h5effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Lz for minimum 5 hits Bar");
+			h7effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Lz for minimum 7 hits Bar");
+			h10effBar[j]=(TH1F*)foutLambda->Get("Gen over GenMC for Lz for minimum 10 hits Bar");
+      	}
+	}
+
+
+	TCanvas *cPoint = new TCanvas("cPoint");
+	TCanvas *cPointBar = new TCanvas("cPointBar");
+	cPoint->Divide(3,1);
+	cPointBar->Divide(3,1);
+	for(int i=0;i<3;i++){
+		cPoint->cd(i+1);
+		gPad->SetGrid();
+		h5eff[i]->SetDirectory(0);
+		h7eff[i]->SetDirectory(0);
+		h10eff[i]->SetDirectory(0);
+		h5eff[i]->SetLineColor(2);
+		h7eff[i]->SetLineColor(4);
+		h10eff[i]->SetLineColor(93);
+		h5eff[i]->SetMarkerStyle(20);
+		h5eff[i]->SetMarkerColor(2);
+		h7eff[i]->SetMarkerStyle(22);
+		h7eff[i]->SetMarkerColor(4);
+		h10eff[i]->SetMarkerStyle(21);
+		h10eff[i]->SetMarkerColor(93);
+		h5eff[i]->Draw();
+		h7eff[i]->Draw("SAME");
+		h10eff[i]->Draw("SAME");
+		cPointBar->cd(i+1);
+		gPad->SetGrid();
+		h5effBar[i]->SetLineColor(2);
+		h7effBar[i]->SetLineColor(4);
+		h10effBar[i]->SetLineColor(93);
+		h5effBar[i]->SetDirectory(0);
+		h7effBar[i]->SetDirectory(0);
+		h10effBar[i]->SetDirectory(0);
+		h5effBar[i]->SetMarkerStyle(20);
+		h5effBar[i]->SetMarkerColor(2);
+		h7effBar[i]->SetMarkerStyle(22);
+		h7effBar[i]->SetMarkerColor(4);
+		h10effBar[i]->SetMarkerStyle(21);
+		h10effBar[i]->SetMarkerColor(93);
+		h5effBar[i]->Draw();
+		h7effBar[i]->Draw("SAME");
+		h10effBar[i]->Draw("SAME");
+	}
+	cPoint->cd(1);
+	auto legendP = new TLegend(0.1,0.7,0.48,0.9);
+   	//legend->SetHeader("The Legend Title","C"); // option "C" allows to center the header
+   	legendP->AddEntry(h5eff[0],"#Lambda efficiency for 5 min hits","lep");
+  	legendP->AddEntry(h7eff[0],"#Lambda efficiency for 7 min hits","lep");
+   	legendP->AddEntry(h10eff[0],"#Lambda efficiency for 10 min hits","lep");	   
+   	legendP->Draw();
+
+	cPointBar->cd(1);
+	auto legendPBar = new TLegend(0.1,0.7,0.48,0.9);
+	legendPBar->AddEntry(h5effBar[0],"#LambdaBar efficiency for 5 min hits","lep");
+  	legendPBar->AddEntry(h7effBar[0],"#LambdaBar efficiency for 7 min hits","lep");
+   	legendPBar->AddEntry(h10effBar[0],"#LambdaBar efficiency for 10 min hits","lep");	   
+   	legendPBar->Draw();
+	h5eff[0]->SetTitle("Efficiency on y");
+	h5eff[1]->SetTitle("Efficiency on Pt");
+	h5eff[2]->SetTitle("Efficiency on Lz");
+	h5effBar[0]->SetTitle("Efficiency on y");
+	h5effBar[1]->SetTitle("Efficiency on Pt");
+	h5effBar[2]->SetTitle("Efficiency on Lz");
+
+	
 
 
 	//Distribuzione 3D per efficienza lambda bar
@@ -251,26 +381,33 @@ void EfficiencyLambda(){
 	effLambdaBar->Divide(3,1);
 	for(int i=0;i<3;i++){
 		eff[i]->SetDirectory(0);
-		effBar[i]->SetDirectory(0);
+	eff10lay[i]->SetDirectory(0);
 		eff[i]->SetMarkerStyle(20);
-		effBar[i]->SetMarkerStyle(20);
+		eff10lay[i]->SetMarkerStyle(21);
 		eff[i]->SetMarkerSize(0.8);
-		effBar[i]->SetMarkerSize(0.8);
-		eff[i]->SetMarkerColor(1);
-		effBar[i]->SetMarkerColor(1);
-
-		eff10lay[i]->SetDirectory(0);
-		effBar10lay[i]->SetDirectory(0);
-		eff10lay[i]->SetMarkerStyle(20);
-		effBar10lay[i]->SetMarkerStyle(20);
-		eff10lay[i]->SetMarkerSize(0.8);
-		effBar10lay[i]->SetMarkerSize(0.8);
-		eff10lay[i]->SetMarkerColor(2);
-		effBar10lay[i]->SetMarkerColor(2);
+eff10lay[i]->SetMarkerSize(0.8);
+		eff[i]->SetMarkerColor(2);
+		eff10lay[i]->SetMarkerColor(4);
+		eff[i]->SetLineColor(2);
+		eff10lay[i]->SetLineColor(4);
 		effLambda->cd(i+1);
 		gPad->SetGrid();
 		eff[i]->Draw();
 		eff10lay[i]->Draw("SAME");
+		
+
+		
+				effBar[i]->SetDirectory(0);
+		effBar10lay[i]->SetDirectory(0);
+		effBar[i]->SetMarkerStyle(20);
+		effBar[i]->SetMarkerSize(0.8);
+		effBar10lay[i]->SetMarkerStyle(20);
+		effBar10lay[i]->SetMarkerSize(0.8);
+		effBar[i]->SetMarkerColor(2);
+		effBar10lay[i]->SetMarkerColor(4);
+		effBar[i]->SetLineColor(2);
+		effBar10lay[i]->SetLineColor(4);
+
 		effLambdaBar->cd(i+1);
 		gPad->SetGrid();
 		effBar[i]->Draw();
@@ -282,6 +419,12 @@ void EfficiencyLambda(){
    	legendL->AddEntry(eff[0],"#Lambda efficiency for 5 layers","lep");
   	legendL->AddEntry(eff10lay[0],"#Lambda efficiency for 10 layers","lep");
    	legendL->Draw();
+	eff[0]->SetTitle("Efficiency on y");
+	eff[1]->SetTitle("Efficiency on Pt");
+	eff[2]->SetTitle("Efficiency on Lz");
+	effBar[0]->SetTitle("Efficiency on y");
+	effBar[1]->SetTitle("Efficiency on Pt");
+	effBar[2]->SetTitle("Efficiency on Lz");
 
 	effLambdaBar->cd(1);
 	auto legendLB = new TLegend(0.1,0.7,0.48,0.9);
@@ -330,6 +473,12 @@ void EfficiencyLambda(){
    	legendL0fake->AddEntry(eff10lay[0],"#Lambda efficiency for 10 layers","lep");
   	legendL0fake->AddEntry(eff10lay0fake[0],"#Lambda efficiency for 10 layers 0fake","lep");
    	legendL0fake->Draw();
+	eff10lay[0]->SetTitle("Efficiency on y");
+	eff10lay[1]->SetTitle("Efficiency on Pt");
+	eff10lay[2]->SetTitle("Efficiency on Lz");
+	effBar10lay[0]->SetTitle("Efficiency on y");
+	effBar10lay[1]->SetTitle("Efficiency on Pt");
+	effBar10lay[2]->SetTitle("Efficiency on Lz");
 
 	effLambdaBar0fake->cd(1);
 	auto legendLB0fake = new TLegend(0.1,0.7,0.48,0.9);
@@ -340,7 +489,7 @@ void EfficiencyLambda(){
 
 	
 
-	TH1D* hPion, *hPionpos, *hProt, *hAntiProt;
+/*	TH1D* hPion, *hPionpos, *hProt, *hAntiProt;
 	hPion = (TH1D*)fPion->Get("hEfficiency");
 	hPionpos = (TH1D*)fPionpos->Get("hEfficiency");
 	hProt = (TH1D*)fProt->Get("hEfficiency");
@@ -369,7 +518,7 @@ void EfficiencyLambda(){
    	legend->AddEntry(hProt,"p efficiency","lep");
    	legend->AddEntry(hAntiProt,"#bar{p} efficiency","lep");	   
    	legend->Draw();
-	
+	*/
 
 	foutLambda->Close();
 }
@@ -396,5 +545,80 @@ void efficiency(TH1F* hRec, TH1F* hMC, TH1F* hGen, char* xaxis, TFile* f){
 	Gen_GenMC->Write();
 	Rec_Gen->SetName(Form("Rec over GenMC for %s",xaxis));
 	Rec_Gen->Write();
+
+}
+void efficiencyGen(TH3F *hMCGenRec[3],char* title, TFile* f){
+	TH1F* hY[3],* hPt[3], *hLz[3];//0=MC,1=Gen,2=Rec
+	for(int i=0;i<3;i++){
+		hY[i]=(TH1F*)hMCGenRec[i]->ProjectionX();
+		hPt[i]=(TH1F*)hMCGenRec[i]->ProjectionY();
+		hLz[i]=(TH1F*)hMCGenRec[i]->ProjectionZ();
+	}
+	TH1F *Rec_GenY = (TH1F*)hY[2]->Clone("Rec_GenY");
+	Rec_GenY->SetDirectory(0);
+	Rec_GenY->Divide(hY[2],hY[0],1,1,"B");
+	//TCanvas *eff_y=new TCanvas(Form("eff_%s",xaxis));
+	Rec_GenY->SetTitle(Form("Rec over GenMC for y %s",title));
+	Rec_GenY->GetXaxis()->SetTitle("y");
+	Rec_GenY->GetYaxis()->SetTitle("Efficiency #epsilon");
+	//Rec_Gen->Draw("E1");
+	TH1F *Gen_GenMCY = (TH1F*)hY[1]->Clone("Gen_GenMC");
+	Gen_GenMCY->SetDirectory(0);
+	Gen_GenMCY->Divide(hY[1],hY[0],1,1,"B");
+	//TCanvas *effGen=new TCanvas(Form("effGen%s",xaxis));
+	Gen_GenMCY->SetTitle(Form("Gen over GenMC for y %s",title));
+	Gen_GenMCY->GetXaxis()->SetTitle("y");
+	Gen_GenMCY->GetYaxis()->SetTitle("Efficiency #epsilon");
+	//Gen_GenMC->Draw("E1");
+	
+
+
+		TH1F *Rec_GenPt = (TH1F*)hPt[2]->Clone("Rec_GenPt");
+	Rec_GenPt->SetDirectory(0);
+	Rec_GenPt->Divide(hPt[2],hPt[0],1,1,"B");
+	//TCanvas *eff_Pt=new TCanvas(Form("eff_%s",xaxis));
+	Rec_GenPt->SetTitle(Form("Rec over GenMC for Pt %s",title));
+	Rec_GenPt->GetXaxis()->SetTitle("Pt");
+	Rec_GenPt->GetYaxis()->SetTitle("Efficiency #epsilon");
+	//Rec_Gen->Draw("E1");
+	TH1F *Gen_GenMCPt = (TH1F*)hPt[1]->Clone("Gen_GenMC");
+	Gen_GenMCPt->SetDirectory(0);
+	Gen_GenMCPt->Divide(hPt[1],hPt[0],1,1,"B");
+	//TCanvas *effGen=new TCanvas(Form("effGen%s",xaxis));
+	Gen_GenMCPt->SetTitle(Form("Gen over GenMC for Pt %s",title));
+	Gen_GenMCPt->GetXaxis()->SetTitle("Pt");
+	Gen_GenMCPt->GetYaxis()->SetTitle("Efficiency #epsilon");
+	//Gen_GenMC->Draw("E1");
+	
+
+	TH1F *Rec_GenLz = (TH1F*)hLz[2]->Clone("Rec_GenLz");
+	Rec_GenLz->SetDirectory(0);
+	Rec_GenLz->Divide(hLz[2],hLz[0],1,1,"B");
+	//TCanvas *eff_Lz=new TCanvas(Form("eff_%s",xaxis));
+	Rec_GenLz->SetTitle(Form("Rec over GenMC for Lz %s",title));
+	Rec_GenLz->GetXaxis()->SetTitle("Lz");
+	Rec_GenLz->GetYaxis()->SetTitle("Efficiency #epsilon");
+	//Rec_Gen->Draw("E1");
+	TH1F *Gen_GenMCLz = (TH1F*)hLz[1]->Clone("Gen_GenMC");
+	Gen_GenMCLz->SetDirectory(0);
+	Gen_GenMCLz->Divide(hLz[1],hLz[0],1,1,"B");
+	//TCanvas *effGen=new TCanvas(Form("effGen%s",xaxis));
+	Gen_GenMCLz->SetTitle(Form("Gen over GenMC for Lz %s",title));
+	Gen_GenMCLz->GetXaxis()->SetTitle("Lz");
+	Gen_GenMCLz->GetYaxis()->SetTitle("Efficiency #epsilon");
+	//Gen_GenMC->Draw("E1");
+	f->cd();
+	Gen_GenMCY->SetName(Form("Gen over GenMC for y %s",title));
+	Gen_GenMCY->Write();
+	Rec_GenY->SetName(Form("Rec over GenMC for y %s",title));
+	Rec_GenY->Write();
+	Gen_GenMCPt->SetName(Form("Gen over GenMC for Pt %s",title));
+	Gen_GenMCPt->Write();
+	Rec_GenPt->SetName(Form("Rec over GenMC for Pt %s",title));
+	Rec_GenPt->Write();
+	Gen_GenMCLz->SetName(Form("Gen over GenMC for Lz %s",title));
+	Gen_GenMCLz->Write();
+	Rec_GenLz->SetName(Form("Rec over GenMC for Lz %s",title));
+	Rec_GenLz->Write();
 
 }

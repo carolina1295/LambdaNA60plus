@@ -1,0 +1,4211 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  AliReconstructedFirst found in libPWGCFKPAnalysis  is already in libPWGCFK0pAnalysis 
+Warning in <TInterpreter::ReadRootmapFile>: class  AliReconstructedSecond found in libPWGCFKPAnalysis  is already in libPWGCFK0pAnalysis 
+Info in <TUnixSystem::ACLiC>: creating shared library /home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaCandidatesmioconcommentiproiez_C.so
+warning: Please remove the deprecated flag -g
+In file included from /home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaCandidatesmioconcommentiproiez_C_ACLiC_dict.cxx:41:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaCandidatesmioconcommentiproiez.C: In function ‘void GenerateD0SignalCandidates(Int_t, double, const char*, const char*, const char*, int, bool, bool)’:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaCandidatesmioconcommentiproiez.C:317:66: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+  317 |   const Int_t nDim=static_cast<const Int_t>(hsp->GetNdimensions());
+      |                                                                  ^
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaCandidatesmioconcommentiproiez.C: In function ‘void MakeD0CombinBkgCandidates(const char*, Int_t, Int_t)’:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaCandidatesmioconcommentiproiez.C:1146:66: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+ 1146 |   const Int_t nDim=static_cast<const Int_t>(hsp->GetNdimensions());
+      |                                                                  ^
+--> pt and y shape of Lambda from /home/carolinda/Scaricati/PtY_spectra.root
+Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <>
+Info in <TGeoGlobalMagField::Lock>: Global magnetic field <> is now locked
+tutto beneeeeeeee yeeeeeeeeeeeee 
+tutto beneeeeeeee NOTLAMBDAAAAAAA 
+Magnetic Field: Custom0
+No BeamPipe found in the setup ~/Scaricati/na60plus/na60fastsim/files/setup-5um-maps_Eff1.txt
+count 5 
+DefStep: Air 100.000000 Mat: 5.000000 | N.MagField regions: 2
+KMCProbeFwd is initialized with 6 slots
+--- Background parameters for E=160 GeV/nucleon ---
+Simulation of background at 160 GeV/nucleon
+pions:   total multiplicity = 1258.000000 ; T = 0.180000
+kaons:   total multiplicity = 155.000000 ; T = 0.230000
+protons: total multiplicity = 292.000000 ; T = 0.310000
+Attention: overriding last active layer from 5 to 5
+*************************************
+number of magnetic field regions = 2
+*** Field region 0 ***
+Bx = -20.000000 B = 0.000000 Bz = 0.000000 zmin = -2.000000 zmax = 40.000000
+*** Field region 1 ***
+B = 250.000000 Rmin = 30.000000 Rmax = 300.000000 zmin = 380.000000 zmax = 680.000000
+EvtGen:Defining EvtPhotosEngine using photonType = gamma
+EvtGen:Setting up PHOTOS.
+EvtGen:Using EvtGen random number engine also for Photos++
+Message from PHCORK(MODCOR):: initialization
+MODOP=5 -- corrects Energy from mass+flow
+
+********************************************************************************
+
+                            =========================
+                              PHOTOS, Version:  3.56
+                              Released at:  3/5/14
+                            =========================
+
+                     Photos QED corrections in Particle Decays
+
+           Monte Carlo Program - by E. Barberio, B. van Eijk and Z. Was
+           From version 2.09   - by P. Golonka and Z. Was
+           From version 3.00   - by N. Davidson, T. Przedzinski and Z. Was
+********************************************************************************
+
+                  Internal (default) input parameters: 
+
+                    INTERF= 1 ISEC= 0 ITRE= 0 IEXP= 1 IFTOP= 1 IFW= 1
+                    ALPHA_QED= 0x1.de3d3945c2bf2p-8 XPHCUT= 0x1.ad7f29abcaf48p-24
+
+                    Option with interference is active
+                    Option with exponentiation is active EPSEXP=0x1.a36e2eb1c432dp-14
+                    Emision in t tbar production is active
+                    Correction wt in decay of W is active
+
+          WARNING:  /HEPEVT/ is not anymore used.
+
+********************************************************************************
+MODOP=2 -- blocks emission in Kl  to gamma e+e-: DEFAULT
+MODOP=2 -- blocks emission in pi0 to gamma e+e-: DEFAULT
+ IPHQRK_setQarknoEmission MODOP=1 -- blocks emission from light quarks:  DEFAULT
+Message from PHCORK(MODCOR):: initialization
+MODOP=5 -- corrects Energy from mass+flow
+EvtGen:Defining EvtPythiaEngine: data tables defined in 
+EvtGen:Pythia 6 codes in decay files will be converted to Pythia 8 codes
+EvtGen:Using EvtGen random engine for Pythia 8 as well
+EvtGen:Creating generic Pythia generator
+
+ PYTHIA Error: settings file /Index.xml not found
+ PYTHIA Abort from Pythia::Pythia: settings unavailable  
+EvtGen:Creating alias Pythia generator
+
+ PYTHIA Error: settings file /Index.xml not found
+ PYTHIA Abort from Pythia::Pythia: settings unavailable  
+EvtGen:Defining EvtTauolaEngine.
+EvtGen:Setting up TAUOLA.
+EvtGen:Using EvtGen random number engine also for Tauola++
+
+ *************************************
+ *     TAUOLA C++ Interface v1.1.4   *
+ *-----------------------------------*
+ *                                   *
+ *   (c) Nadia    Davidson,   (1,2)  *
+ *       Gizo     Nanava,     (3)    *
+ *       Tomasz   Przedzinski,(4)    *
+ *       Elzbieta Richter-Was,(2,4)  *
+ *       Zbigniew Was         (2,5)  *
+ *                                   *
+ *  1) Unimelb, Melbourne, Australia *
+ *  2)     INP, Krakow, Poland       *
+ *  3) University Bonn, Germany      *
+ *  4)      UJ, Krakow, Poland       *
+ *  5)    CERN, Geneva, Switzerland  *
+ *************************************
+Reading SANC input files.
+File 'table1-1.txt'  missing... skipped.
+File 'table2-2.txt'  missing... skipped.
+File 'table11-11.txt' missing... skipped.
+
+EvtGen:Initializing EvtGen
+EvtGen:Storing known decay models
+EvtGen:Defining EvtBcToNPi model: Bc -> V + npi and Bc -> P + npi decays
+from A.V. Berezhnoy, A.K. Likhoded, A.V. Luchinsky: Phys.Rev.D 82, 014012 (2010) and arXiV:1104.0808.
+EvtGen:Main decay file name  :/home/carolinda/alice/sw/ubuntu2004_x86-64/AliRoot/master-1/TEvtGen/EvtGen/DECAY.DEC
+EvtGen:PDT table file name   :/home/carolinda/alice/sw/ubuntu2004_x86-64/AliRoot/master-1/TEvtGen/EvtGen/evt.pdl
+EvtGen:In readDecayFile, reading:/home/carolinda/alice/sw/ubuntu2004_x86-64/AliRoot/master-1/TEvtGen/EvtGen/DECAY.DEC
+EvtGen:Warning, sum of branching fractions for omega is 0.993689
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for phi is 0.998736
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for f_2 is 0.999016
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for chi_c1 is 0.995996
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for Upsilon(2S) is 0.9921
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for Upsilon(3S) is 0.99911
+EvtGen:rescaled to one! 
+EvtGen:Mixing type integer set to 1
+EvtGen:Done initializing EvtGen
+-rw-rw-r-- 1 carolinda carolinda 65 nov 20 06:19 /home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:In readDecayFile, reading:/home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:Redefined decay of Lambda0
+-- Use  decay table from file /home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:In readDecayFile, reading:/home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:Redefined decay of Lambda0
+ ***************  ev = 0 
+fNChPi=895.970585 ntrPi=956.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 1000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 2000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 3000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 4000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 5000 
+fNChPi=895.970585 ntrPi=960.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 6000 
+fNChPi=895.970585 ntrPi=952.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=75.000000
+ ***************  ev = 7000 
+fNChPi=895.970585 ntrPi=909.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 8000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 9000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 10000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 11000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=103.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 12000 
+fNChPi=895.970585 ntrPi=840.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=72.000000
+ ***************  ev = 13000 
+fNChPi=895.970585 ntrPi=934.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 14000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=155.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 15000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 16000 
+fNChPi=895.970585 ntrPi=844.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 17000 
+fNChPi=895.970585 ntrPi=837.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 18000 
+fNChPi=895.970585 ntrPi=939.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 19000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 20000 
+fNChPi=895.970585 ntrPi=853.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 21000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 22000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 23000 
+fNChPi=895.970585 ntrPi=950.000000
+fNChK=122.178871 ntrK=97.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 24000 
+fNChPi=895.970585 ntrPi=943.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 25000 
+fNChPi=895.970585 ntrPi=931.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 26000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 27000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 28000 
+fNChPi=895.970585 ntrPi=846.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 29000 
+fNChPi=895.970585 ntrPi=850.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 30000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 31000 
+fNChPi=895.970585 ntrPi=850.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 32000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 33000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 34000 
+fNChPi=895.970585 ntrPi=843.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 35000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 36000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 37000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 38000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 39000 
+fNChPi=895.970585 ntrPi=964.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 40000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=71.000000
+ ***************  ev = 41000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 42000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=114.000000
+ ***************  ev = 43000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 44000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 45000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 46000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 47000 
+fNChPi=895.970585 ntrPi=966.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 48000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 49000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 50000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 51000 
+fNChPi=895.970585 ntrPi=961.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 52000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 53000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=100.000000
+fNChP=91.244961 ntrP=67.000000
+ ***************  ev = 54000 
+fNChPi=895.970585 ntrPi=963.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 55000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 56000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 57000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 58000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 59000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 60000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 61000 
+fNChPi=895.970585 ntrPi=839.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 62000 
+fNChPi=895.970585 ntrPi=844.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 63000 
+fNChPi=895.970585 ntrPi=939.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 64000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 65000 
+fNChPi=895.970585 ntrPi=857.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 66000 
+fNChPi=895.970585 ntrPi=936.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 67000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 68000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=145.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 69000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 70000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 71000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 72000 
+fNChPi=895.970585 ntrPi=852.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 73000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 74000 
+fNChPi=895.970585 ntrPi=844.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 75000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 76000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 77000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=68.000000
+ ***************  ev = 78000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 79000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 80000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 81000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 82000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 83000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 84000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=111.000000
+ ***************  ev = 85000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 86000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 87000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 88000 
+fNChPi=895.970585 ntrPi=842.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 89000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 90000 
+fNChPi=895.970585 ntrPi=959.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 91000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 92000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 93000 
+fNChPi=895.970585 ntrPi=840.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 94000 
+fNChPi=895.970585 ntrPi=853.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=112.000000
+ ***************  ev = 95000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 96000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 97000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 98000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 99000 
+fNChPi=895.970585 ntrPi=804.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 100000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 101000 
+fNChPi=895.970585 ntrPi=848.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 102000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 103000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 104000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=72.000000
+ ***************  ev = 105000 
+fNChPi=895.970585 ntrPi=914.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 106000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 107000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 108000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 109000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 110000 
+fNChPi=895.970585 ntrPi=846.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 111000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=113.000000
+ ***************  ev = 112000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 113000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 114000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 115000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 116000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 117000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 118000 
+fNChPi=895.970585 ntrPi=867.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 119000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 120000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 121000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 122000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 123000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 124000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=92.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 125000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 126000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 127000 
+fNChPi=895.970585 ntrPi=952.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 128000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 129000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 130000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 131000 
+fNChPi=895.970585 ntrPi=932.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 132000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 133000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 134000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=111.000000
+ ***************  ev = 135000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 136000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 137000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 138000 
+fNChPi=895.970585 ntrPi=932.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 139000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 140000 
+fNChPi=895.970585 ntrPi=941.000000
+fNChK=122.178871 ntrK=103.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 141000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 142000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 143000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 144000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 145000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 146000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 147000 
+fNChPi=895.970585 ntrPi=909.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 148000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 149000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 150000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 151000 
+fNChPi=895.970585 ntrPi=951.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 152000 
+fNChPi=895.970585 ntrPi=863.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 153000 
+fNChPi=895.970585 ntrPi=947.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 154000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=101.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 155000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 156000 
+fNChPi=895.970585 ntrPi=959.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 157000 
+fNChPi=895.970585 ntrPi=932.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 158000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 159000 
+fNChPi=895.970585 ntrPi=914.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 160000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 161000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 162000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 163000 
+fNChPi=895.970585 ntrPi=925.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 164000 
+fNChPi=895.970585 ntrPi=851.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=113.000000
+ ***************  ev = 165000 
+fNChPi=895.970585 ntrPi=957.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 166000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 167000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 168000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 169000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 170000 
+fNChPi=895.970585 ntrPi=839.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 171000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 172000 
+fNChPi=895.970585 ntrPi=931.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 173000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 174000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 175000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 176000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 177000 
+fNChPi=895.970585 ntrPi=854.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 178000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 179000 
+fNChPi=895.970585 ntrPi=934.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 180000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 181000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=143.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 182000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 183000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=92.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 184000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 185000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=148.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 186000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 187000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 188000 
+fNChPi=895.970585 ntrPi=953.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 189000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 190000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 191000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 192000 
+fNChPi=895.970585 ntrPi=938.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 193000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 194000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 195000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 196000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 197000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 198000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=75.000000
+ ***************  ev = 199000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 200000 
+fNChPi=895.970585 ntrPi=836.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 201000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 202000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 203000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 204000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 205000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 206000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 207000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 208000 
+fNChPi=895.970585 ntrPi=867.000000
+fNChK=122.178871 ntrK=146.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 209000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 210000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 211000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 212000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 213000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 214000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 215000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 216000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 217000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 218000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 219000 
+fNChPi=895.970585 ntrPi=956.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 220000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 221000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 222000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=72.000000
+ ***************  ev = 223000 
+fNChPi=895.970585 ntrPi=974.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 224000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 225000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 226000 
+fNChPi=895.970585 ntrPi=852.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 227000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 228000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 229000 
+fNChPi=895.970585 ntrPi=863.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 230000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 231000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 232000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 233000 
+fNChPi=895.970585 ntrPi=859.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=113.000000
+ ***************  ev = 234000 
+fNChPi=895.970585 ntrPi=833.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=111.000000
+ ***************  ev = 235000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 236000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 237000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 238000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 239000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 240000 
+fNChPi=895.970585 ntrPi=914.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 241000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 242000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 243000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 244000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 245000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 246000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 247000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 248000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 249000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 250000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 251000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 252000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 253000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 254000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 255000 
+fNChPi=895.970585 ntrPi=834.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 256000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 257000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=95.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 258000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 259000 
+fNChPi=895.970585 ntrPi=827.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 260000 
+fNChPi=895.970585 ntrPi=867.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 261000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 262000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=122.000000
+ ***************  ev = 263000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 264000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 265000 
+fNChPi=895.970585 ntrPi=834.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 266000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 267000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 268000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 269000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 270000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 271000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 272000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 273000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 274000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 275000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 276000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=115.000000
+ ***************  ev = 277000 
+fNChPi=895.970585 ntrPi=983.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 278000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 279000 
+fNChPi=895.970585 ntrPi=852.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 280000 
+fNChPi=895.970585 ntrPi=863.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 281000 
+fNChPi=895.970585 ntrPi=848.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 282000 
+fNChPi=895.970585 ntrPi=861.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 283000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 284000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 285000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 286000 
+fNChPi=895.970585 ntrPi=847.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 287000 
+fNChPi=895.970585 ntrPi=828.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 288000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 289000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 290000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 291000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 292000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 293000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 294000 
+fNChPi=895.970585 ntrPi=950.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=114.000000
+ ***************  ev = 295000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 296000 
+fNChPi=895.970585 ntrPi=853.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 297000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 298000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 299000 
+fNChPi=895.970585 ntrPi=936.000000
+fNChK=122.178871 ntrK=103.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 300000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 301000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 302000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 303000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 304000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 305000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 306000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 307000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 308000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 309000 
+fNChPi=895.970585 ntrPi=942.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 310000 
+fNChPi=895.970585 ntrPi=840.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 311000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 312000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 313000 
+fNChPi=895.970585 ntrPi=836.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 314000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 315000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 316000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 317000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 318000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 319000 
+fNChPi=895.970585 ntrPi=854.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 320000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 321000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 322000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=112.000000
+ ***************  ev = 323000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=75.000000
+ ***************  ev = 324000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 325000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 326000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 327000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 328000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 329000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 330000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 331000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 332000 
+fNChPi=895.970585 ntrPi=942.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 333000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 334000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 335000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 336000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 337000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 338000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 339000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 340000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 341000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 342000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=114.000000
+ ***************  ev = 343000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 344000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 345000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 346000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 347000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 348000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 349000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 350000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=118.000000
+ ***************  ev = 351000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 352000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 353000 
+fNChPi=895.970585 ntrPi=867.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 354000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 355000 
+fNChPi=895.970585 ntrPi=948.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 356000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 357000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 358000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 359000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 360000 
+fNChPi=895.970585 ntrPi=844.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 361000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=158.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 362000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 363000 
+fNChPi=895.970585 ntrPi=843.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 364000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 365000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 366000 
+fNChPi=895.970585 ntrPi=937.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 367000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 368000 
+fNChPi=895.970585 ntrPi=946.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 369000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 370000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 371000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 372000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 373000 
+fNChPi=895.970585 ntrPi=932.000000
+fNChK=122.178871 ntrK=154.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 374000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 375000 
+fNChPi=895.970585 ntrPi=944.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 376000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 377000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=95.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 378000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=97.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 379000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 380000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 381000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 382000 
+fNChPi=895.970585 ntrPi=914.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 383000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=101.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 384000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 385000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 386000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 387000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 388000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 389000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 390000 
+fNChPi=895.970585 ntrPi=850.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 391000 
+fNChPi=895.970585 ntrPi=925.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 392000 
+fNChPi=895.970585 ntrPi=840.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=64.000000
+ ***************  ev = 393000 
+fNChPi=895.970585 ntrPi=943.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 394000 
+fNChPi=895.970585 ntrPi=975.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 395000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=152.000000
+fNChP=91.244961 ntrP=75.000000
+ ***************  ev = 396000 
+fNChPi=895.970585 ntrPi=948.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 397000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 398000 
+fNChPi=895.970585 ntrPi=857.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 399000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 400000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 401000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 402000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 403000 
+fNChPi=895.970585 ntrPi=934.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 404000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 405000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 406000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=113.000000
+ ***************  ev = 407000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 408000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 409000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 410000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 411000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 412000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 413000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 414000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 415000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 416000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 417000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 418000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 419000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 420000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 421000 
+fNChPi=895.970585 ntrPi=850.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 422000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 423000 
+fNChPi=895.970585 ntrPi=942.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 424000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 425000 
+fNChPi=895.970585 ntrPi=831.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 426000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 427000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=65.000000
+ ***************  ev = 428000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=63.000000
+ ***************  ev = 429000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 430000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 431000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 432000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 433000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 434000 
+fNChPi=895.970585 ntrPi=909.000000
+fNChK=122.178871 ntrK=93.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 435000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 436000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 437000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 438000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 439000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 440000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 441000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 442000 
+fNChPi=895.970585 ntrPi=932.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 443000 
+fNChPi=895.970585 ntrPi=851.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 444000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 445000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 446000 
+fNChPi=895.970585 ntrPi=953.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 447000 
+fNChPi=895.970585 ntrPi=847.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 448000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 449000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 450000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 451000 
+fNChPi=895.970585 ntrPi=958.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 452000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 453000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 454000 
+fNChPi=895.970585 ntrPi=867.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 455000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 456000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 457000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 458000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 459000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 460000 
+fNChPi=895.970585 ntrPi=934.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 461000 
+fNChPi=895.970585 ntrPi=945.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 462000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 463000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 464000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 465000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 466000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 467000 
+fNChPi=895.970585 ntrPi=853.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 468000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 469000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 470000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 471000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 472000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 473000 
+fNChPi=895.970585 ntrPi=945.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 474000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 475000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 476000 
+fNChPi=895.970585 ntrPi=941.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 477000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 478000 
+fNChPi=895.970585 ntrPi=925.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 479000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 480000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 481000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=98.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 482000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 483000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 484000 
+fNChPi=895.970585 ntrPi=829.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 485000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=112.000000
+ ***************  ev = 486000 
+fNChPi=895.970585 ntrPi=843.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 487000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 488000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 489000 
+fNChPi=895.970585 ntrPi=950.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 490000 
+fNChPi=895.970585 ntrPi=858.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=112.000000
+ ***************  ev = 491000 
+fNChPi=895.970585 ntrPi=937.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 492000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 493000 
+fNChPi=895.970585 ntrPi=852.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 494000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 495000 
+fNChPi=895.970585 ntrPi=959.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 496000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 497000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 498000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 499000 
+fNChPi=895.970585 ntrPi=936.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 500000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 501000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 502000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 503000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 504000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=99.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 505000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 506000 
+fNChPi=895.970585 ntrPi=957.000000
+fNChK=122.178871 ntrK=89.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 507000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 508000 
+fNChPi=895.970585 ntrPi=858.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 509000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 510000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 511000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 512000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=147.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 513000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 514000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 515000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 516000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 517000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 518000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 519000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 520000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 521000 
+fNChPi=895.970585 ntrPi=854.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 522000 
+fNChPi=895.970585 ntrPi=850.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 523000 
+fNChPi=895.970585 ntrPi=873.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 524000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 525000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 526000 
+fNChPi=895.970585 ntrPi=925.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=72.000000
+ ***************  ev = 527000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 528000 
+fNChPi=895.970585 ntrPi=949.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 529000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 530000 
+fNChPi=895.970585 ntrPi=945.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 531000 
+fNChPi=895.970585 ntrPi=863.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 532000 
+fNChPi=895.970585 ntrPi=873.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 533000 
+fNChPi=895.970585 ntrPi=937.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 534000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 535000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 536000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 537000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 538000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 539000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 540000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 541000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 542000 
+fNChPi=895.970585 ntrPi=945.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 543000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 544000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 545000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 546000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 547000 
+fNChPi=895.970585 ntrPi=946.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 548000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=149.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 549000 
+fNChPi=895.970585 ntrPi=861.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 550000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 551000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=156.000000
+fNChP=91.244961 ntrP=112.000000
+ ***************  ev = 552000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 553000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 554000 
+fNChPi=895.970585 ntrPi=942.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 555000 
+fNChPi=895.970585 ntrPi=931.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 556000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 557000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 558000 
+fNChPi=895.970585 ntrPi=851.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 559000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 560000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=97.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 561000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 562000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 563000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 564000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 565000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 566000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 567000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=69.000000
+ ***************  ev = 568000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 569000 
+fNChPi=895.970585 ntrPi=869.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 570000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 571000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 572000 
+fNChPi=895.970585 ntrPi=836.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 573000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 574000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 575000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 576000 
+fNChPi=895.970585 ntrPi=842.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 577000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 578000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 579000 
+fNChPi=895.970585 ntrPi=914.000000
+fNChK=122.178871 ntrK=100.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 580000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 581000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=150.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 582000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 583000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 584000 
+fNChPi=895.970585 ntrPi=873.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 585000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 586000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 587000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 588000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 589000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 590000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=103.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 591000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 592000 
+fNChPi=895.970585 ntrPi=942.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 593000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=151.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 594000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 595000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 596000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 597000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 598000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 599000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 600000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 601000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=145.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 602000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 603000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 604000 
+fNChPi=895.970585 ntrPi=946.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 605000 
+fNChPi=895.970585 ntrPi=939.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 606000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 607000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 608000 
+fNChPi=895.970585 ntrPi=938.000000
+fNChK=122.178871 ntrK=91.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 609000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 610000 
+fNChPi=895.970585 ntrPi=843.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 611000 
+fNChPi=895.970585 ntrPi=831.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 612000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 613000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 614000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=70.000000
+ ***************  ev = 615000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 616000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 617000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 618000 
+fNChPi=895.970585 ntrPi=950.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 619000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 620000 
+fNChPi=895.970585 ntrPi=944.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 621000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 622000 
+fNChPi=895.970585 ntrPi=848.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 623000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 624000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 625000 
+fNChPi=895.970585 ntrPi=947.000000
+fNChK=122.178871 ntrK=97.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 626000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 627000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 628000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=75.000000
+ ***************  ev = 629000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 630000 
+fNChPi=895.970585 ntrPi=936.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 631000 
+fNChPi=895.970585 ntrPi=960.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 632000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 633000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 634000 
+fNChPi=895.970585 ntrPi=941.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=67.000000
+ ***************  ev = 635000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 636000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 637000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 638000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 639000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 640000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 641000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 642000 
+fNChPi=895.970585 ntrPi=861.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 643000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 644000 
+fNChPi=895.970585 ntrPi=827.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 645000 
+fNChPi=895.970585 ntrPi=931.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 646000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 647000 
+fNChPi=895.970585 ntrPi=951.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 648000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 649000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=71.000000
+ ***************  ev = 650000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 651000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 652000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 653000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 654000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 655000 
+fNChPi=895.970585 ntrPi=931.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 656000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 657000 
+fNChPi=895.970585 ntrPi=937.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 658000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 659000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 660000 
+fNChPi=895.970585 ntrPi=952.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 661000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=150.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 662000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 663000 
+fNChPi=895.970585 ntrPi=836.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 664000 
+fNChPi=895.970585 ntrPi=836.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 665000 
+fNChPi=895.970585 ntrPi=947.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 666000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 667000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 668000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 669000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=111.000000
+ ***************  ev = 670000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 671000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 672000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 673000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=114.000000
+ ***************  ev = 674000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 675000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 676000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=116.000000
+ ***************  ev = 677000 
+fNChPi=895.970585 ntrPi=851.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 678000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 679000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 680000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 681000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 682000 
+fNChPi=895.970585 ntrPi=914.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 683000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 684000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 685000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 686000 
+fNChPi=895.970585 ntrPi=941.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 687000 
+fNChPi=895.970585 ntrPi=954.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 688000 
+fNChPi=895.970585 ntrPi=828.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 689000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 690000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 691000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 692000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 693000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 694000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 695000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 696000 
+fNChPi=895.970585 ntrPi=939.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 697000 
+fNChPi=895.970585 ntrPi=871.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 698000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 699000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 700000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 701000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=150.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 702000 
+fNChPi=895.970585 ntrPi=925.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 703000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 704000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 705000 
+fNChPi=895.970585 ntrPi=873.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 706000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 707000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 708000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 709000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=99.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 710000 
+fNChPi=895.970585 ntrPi=861.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 711000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 712000 
+fNChPi=895.970585 ntrPi=907.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 713000 
+fNChPi=895.970585 ntrPi=939.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 714000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 715000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 716000 
+fNChPi=895.970585 ntrPi=937.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 717000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 718000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 719000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 720000 
+fNChPi=895.970585 ntrPi=859.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 721000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 722000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 723000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 724000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 725000 
+fNChPi=895.970585 ntrPi=858.000000
+fNChK=122.178871 ntrK=96.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 726000 
+fNChPi=895.970585 ntrPi=936.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=71.000000
+ ***************  ev = 727000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 728000 
+fNChPi=895.970585 ntrPi=857.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=123.000000
+ ***************  ev = 729000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 730000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 731000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 732000 
+fNChPi=895.970585 ntrPi=945.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 733000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 734000 
+fNChPi=895.970585 ntrPi=947.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 735000 
+fNChPi=895.970585 ntrPi=951.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 736000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=143.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 737000 
+fNChPi=895.970585 ntrPi=962.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 738000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=97.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 739000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=152.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 740000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=95.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 741000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 742000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 743000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 744000 
+fNChPi=895.970585 ntrPi=959.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 745000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 746000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=68.000000
+ ***************  ev = 747000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=111.000000
+ ***************  ev = 748000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 749000 
+fNChPi=895.970585 ntrPi=944.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 750000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 751000 
+fNChPi=895.970585 ntrPi=943.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 752000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 753000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 754000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 755000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 756000 
+fNChPi=895.970585 ntrPi=911.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 757000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=75.000000
+ ***************  ev = 758000 
+fNChPi=895.970585 ntrPi=854.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 759000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 760000 
+fNChPi=895.970585 ntrPi=945.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 761000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=148.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 762000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=156.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 763000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 764000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 765000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 766000 
+fNChPi=895.970585 ntrPi=861.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 767000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 768000 
+fNChPi=895.970585 ntrPi=808.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 769000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 770000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=77.000000
+ ***************  ev = 771000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 772000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 773000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 774000 
+fNChPi=895.970585 ntrPi=815.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 775000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 776000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 777000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 778000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 779000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 780000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 781000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=72.000000
+ ***************  ev = 782000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=145.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 783000 
+fNChPi=895.970585 ntrPi=895.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 784000 
+fNChPi=895.970585 ntrPi=849.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=114.000000
+ ***************  ev = 785000 
+fNChPi=895.970585 ntrPi=915.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 786000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 787000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 788000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 789000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=104.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 790000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 791000 
+fNChPi=895.970585 ntrPi=852.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 792000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 793000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=102.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 794000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 795000 
+fNChPi=895.970585 ntrPi=841.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 796000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=142.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 797000 
+fNChPi=895.970585 ntrPi=825.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 798000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 799000 
+fNChPi=895.970585 ntrPi=849.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 800000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 801000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 802000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 803000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 804000 
+fNChPi=895.970585 ntrPi=917.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 805000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 806000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 807000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=148.000000
+fNChP=91.244961 ntrP=104.000000
+ ***************  ev = 808000 
+fNChPi=895.970585 ntrPi=926.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 809000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 810000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=149.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 811000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=101.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 812000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 813000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 814000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=116.000000
+ ***************  ev = 815000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 816000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 817000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 818000 
+fNChPi=895.970585 ntrPi=817.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 819000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 820000 
+fNChPi=895.970585 ntrPi=863.000000
+fNChK=122.178871 ntrK=152.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 821000 
+fNChPi=895.970585 ntrPi=858.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 822000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 823000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 824000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=101.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 825000 
+fNChPi=895.970585 ntrPi=908.000000
+fNChK=122.178871 ntrK=149.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 826000 
+fNChPi=895.970585 ntrPi=848.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 827000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 828000 
+fNChPi=895.970585 ntrPi=843.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 829000 
+fNChPi=895.970585 ntrPi=934.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 830000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=144.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 831000 
+fNChPi=895.970585 ntrPi=833.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 832000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 833000 
+fNChPi=895.970585 ntrPi=958.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 834000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 835000 
+fNChPi=895.970585 ntrPi=903.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 836000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 837000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 838000 
+fNChPi=895.970585 ntrPi=905.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 839000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 840000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 841000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 842000 
+fNChPi=895.970585 ntrPi=918.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=108.000000
+ ***************  ev = 843000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 844000 
+fNChPi=895.970585 ntrPi=869.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 845000 
+fNChPi=895.970585 ntrPi=932.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 846000 
+fNChPi=895.970585 ntrPi=854.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 847000 
+fNChPi=895.970585 ntrPi=961.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 848000 
+fNChPi=895.970585 ntrPi=906.000000
+fNChK=122.178871 ntrK=99.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 849000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 850000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 851000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 852000 
+fNChPi=895.970585 ntrPi=953.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 853000 
+fNChPi=895.970585 ntrPi=838.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 854000 
+fNChPi=895.970585 ntrPi=861.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 855000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 856000 
+fNChPi=895.970585 ntrPi=830.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 857000 
+fNChPi=895.970585 ntrPi=936.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 858000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 859000 
+fNChPi=895.970585 ntrPi=909.000000
+fNChK=122.178871 ntrK=136.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 860000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 861000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 862000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 863000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=141.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 864000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 865000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 866000 
+fNChPi=895.970585 ntrPi=814.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 867000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 868000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=118.000000
+ ***************  ev = 869000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 870000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 871000 
+fNChPi=895.970585 ntrPi=847.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 872000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 873000 
+fNChPi=895.970585 ntrPi=958.000000
+fNChK=122.178871 ntrK=109.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 874000 
+fNChPi=895.970585 ntrPi=879.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 875000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=138.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 876000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 877000 
+fNChPi=895.970585 ntrPi=897.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 878000 
+fNChPi=895.970585 ntrPi=863.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 879000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 880000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 881000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=103.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 882000 
+fNChPi=895.970585 ntrPi=948.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 883000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=70.000000
+ ***************  ev = 884000 
+fNChPi=895.970585 ntrPi=844.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 885000 
+fNChPi=895.970585 ntrPi=938.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 886000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 887000 
+fNChPi=895.970585 ntrPi=836.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=106.000000
+ ***************  ev = 888000 
+fNChPi=895.970585 ntrPi=853.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 889000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 890000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 891000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 892000 
+fNChPi=895.970585 ntrPi=882.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 893000 
+fNChPi=895.970585 ntrPi=921.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 894000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 895000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 896000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=143.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 897000 
+fNChPi=895.970585 ntrPi=930.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 898000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 899000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 900000 
+fNChPi=895.970585 ntrPi=847.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 901000 
+fNChPi=895.970585 ntrPi=830.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 902000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=131.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 903000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 904000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 905000 
+fNChPi=895.970585 ntrPi=944.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 906000 
+fNChPi=895.970585 ntrPi=964.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 907000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 908000 
+fNChPi=895.970585 ntrPi=865.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 909000 
+fNChPi=895.970585 ntrPi=833.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 910000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 911000 
+fNChPi=895.970585 ntrPi=878.000000
+fNChK=122.178871 ntrK=123.000000
+fNChP=91.244961 ntrP=76.000000
+ ***************  ev = 912000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 913000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 914000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 915000 
+fNChPi=895.970585 ntrPi=864.000000
+fNChK=122.178871 ntrK=148.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 916000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=99.000000
+ ***************  ev = 917000 
+fNChPi=895.970585 ntrPi=989.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=110.000000
+ ***************  ev = 918000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=113.000000
+ ***************  ev = 919000 
+fNChPi=895.970585 ntrPi=909.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 920000 
+fNChPi=895.970585 ntrPi=894.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 921000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 922000 
+fNChPi=895.970585 ntrPi=881.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 923000 
+fNChPi=895.970585 ntrPi=862.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 924000 
+fNChPi=895.970585 ntrPi=933.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=92.000000
+ ***************  ev = 925000 
+fNChPi=895.970585 ntrPi=872.000000
+fNChK=122.178871 ntrK=148.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 926000 
+fNChPi=895.970585 ntrPi=890.000000
+fNChK=122.178871 ntrK=117.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 927000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=110.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 928000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 929000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 930000 
+fNChPi=895.970585 ntrPi=874.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 931000 
+fNChPi=895.970585 ntrPi=866.000000
+fNChK=122.178871 ntrK=115.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 932000 
+fNChPi=895.970585 ntrPi=934.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 933000 
+fNChPi=895.970585 ntrPi=850.000000
+fNChK=122.178871 ntrK=105.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 934000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 935000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 936000 
+fNChPi=895.970585 ntrPi=846.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=111.000000
+ ***************  ev = 937000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=140.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 938000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=79.000000
+ ***************  ev = 939000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=112.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 940000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 941000 
+fNChPi=895.970585 ntrPi=849.000000
+fNChK=122.178871 ntrK=118.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 942000 
+fNChPi=895.970585 ntrPi=860.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=78.000000
+ ***************  ev = 943000 
+fNChPi=895.970585 ntrPi=913.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=98.000000
+ ***************  ev = 944000 
+fNChPi=895.970585 ntrPi=842.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 945000 
+fNChPi=895.970585 ntrPi=944.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=82.000000
+ ***************  ev = 946000 
+fNChPi=895.970585 ntrPi=927.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 947000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 948000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=72.000000
+ ***************  ev = 949000 
+fNChPi=895.970585 ntrPi=956.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 950000 
+fNChPi=895.970585 ntrPi=899.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=84.000000
+ ***************  ev = 951000 
+fNChPi=895.970585 ntrPi=938.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 952000 
+fNChPi=895.970585 ntrPi=856.000000
+fNChK=122.178871 ntrK=135.000000
+fNChP=91.244961 ntrP=73.000000
+ ***************  ev = 953000 
+fNChPi=895.970585 ntrPi=884.000000
+fNChK=122.178871 ntrK=125.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 954000 
+fNChPi=895.970585 ntrPi=935.000000
+fNChK=122.178871 ntrK=94.000000
+fNChP=91.244961 ntrP=88.000000
+ ***************  ev = 955000 
+fNChPi=895.970585 ntrPi=883.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 956000 
+fNChPi=895.970585 ntrPi=920.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=87.000000
+ ***************  ev = 957000 
+fNChPi=895.970585 ntrPi=869.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=107.000000
+ ***************  ev = 958000 
+fNChPi=895.970585 ntrPi=868.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 959000 
+fNChPi=895.970585 ntrPi=885.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 960000 
+fNChPi=895.970585 ntrPi=887.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 961000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=134.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 962000 
+fNChPi=895.970585 ntrPi=875.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 963000 
+fNChPi=895.970585 ntrPi=910.000000
+fNChK=122.178871 ntrK=111.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 964000 
+fNChPi=895.970585 ntrPi=912.000000
+fNChK=122.178871 ntrK=116.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 965000 
+fNChPi=895.970585 ntrPi=845.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 966000 
+fNChPi=895.970585 ntrPi=870.000000
+fNChK=122.178871 ntrK=149.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 967000 
+fNChPi=895.970585 ntrPi=880.000000
+fNChK=122.178871 ntrK=137.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 968000 
+fNChPi=895.970585 ntrPi=896.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=101.000000
+ ***************  ev = 969000 
+fNChPi=895.970585 ntrPi=919.000000
+fNChK=122.178871 ntrK=129.000000
+fNChP=91.244961 ntrP=94.000000
+ ***************  ev = 970000 
+fNChPi=895.970585 ntrPi=901.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 971000 
+fNChPi=895.970585 ntrPi=832.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=105.000000
+ ***************  ev = 972000 
+fNChPi=895.970585 ntrPi=886.000000
+fNChK=122.178871 ntrK=107.000000
+fNChP=91.244961 ntrP=85.000000
+ ***************  ev = 973000 
+fNChPi=895.970585 ntrPi=898.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 974000 
+fNChPi=895.970585 ntrPi=855.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=71.000000
+ ***************  ev = 975000 
+fNChPi=895.970585 ntrPi=848.000000
+fNChK=122.178871 ntrK=139.000000
+fNChP=91.244961 ntrP=91.000000
+ ***************  ev = 976000 
+fNChPi=895.970585 ntrPi=922.000000
+fNChK=122.178871 ntrK=119.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 977000 
+fNChPi=895.970585 ntrPi=893.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 978000 
+fNChPi=895.970585 ntrPi=928.000000
+fNChK=122.178871 ntrK=108.000000
+fNChP=91.244961 ntrP=103.000000
+ ***************  ev = 979000 
+fNChPi=895.970585 ntrPi=891.000000
+fNChK=122.178871 ntrK=113.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 980000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=102.000000
+ ***************  ev = 981000 
+fNChPi=895.970585 ntrPi=923.000000
+fNChK=122.178871 ntrK=132.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 982000 
+fNChPi=895.970585 ntrPi=902.000000
+fNChK=122.178871 ntrK=133.000000
+fNChP=91.244961 ntrP=100.000000
+ ***************  ev = 983000 
+fNChPi=895.970585 ntrPi=853.000000
+fNChK=122.178871 ntrK=120.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 984000 
+fNChPi=895.970585 ntrPi=889.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 985000 
+fNChPi=895.970585 ntrPi=955.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=90.000000
+ ***************  ev = 986000 
+fNChPi=895.970585 ntrPi=924.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 987000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=74.000000
+ ***************  ev = 988000 
+fNChPi=895.970585 ntrPi=909.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=89.000000
+ ***************  ev = 989000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=127.000000
+fNChP=91.244961 ntrP=80.000000
+ ***************  ev = 990000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=121.000000
+fNChP=91.244961 ntrP=109.000000
+ ***************  ev = 991000 
+fNChPi=895.970585 ntrPi=888.000000
+fNChK=122.178871 ntrK=106.000000
+fNChP=91.244961 ntrP=86.000000
+ ***************  ev = 992000 
+fNChPi=895.970585 ntrPi=900.000000
+fNChK=122.178871 ntrK=96.000000
+fNChP=91.244961 ntrP=97.000000
+ ***************  ev = 993000 
+fNChPi=895.970585 ntrPi=904.000000
+fNChK=122.178871 ntrK=124.000000
+fNChP=91.244961 ntrP=93.000000
+ ***************  ev = 994000 
+fNChPi=895.970585 ntrPi=877.000000
+fNChK=122.178871 ntrK=122.000000
+fNChP=91.244961 ntrP=81.000000
+ ***************  ev = 995000 
+fNChPi=895.970585 ntrPi=937.000000
+fNChK=122.178871 ntrK=128.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 996000 
+fNChPi=895.970585 ntrPi=916.000000
+fNChK=122.178871 ntrK=130.000000
+fNChP=91.244961 ntrP=83.000000
+ ***************  ev = 997000 
+fNChPi=895.970585 ntrPi=892.000000
+fNChK=122.178871 ntrK=103.000000
+fNChP=91.244961 ntrP=96.000000
+ ***************  ev = 998000 
+fNChPi=895.970585 ntrPi=929.000000
+fNChK=122.178871 ntrK=114.000000
+fNChP=91.244961 ntrP=95.000000
+ ***************  ev = 999000 
+fNChPi=895.970585 ntrPi=876.000000
+fNChK=122.178871 ntrK=126.000000
+fNChP=91.244961 ntrP=83.000000
+I-TCanvas::MakeDefCanvas:  created default TCanvas with name c1
+bincenterPTOTDIST 0.050000,bin 1 
+bincenterPTOTDIST 0.450000,bin 5 
+bincenterPTOTDIST 0.550000,bin 6 
+bincenter 1.550000,bin 16 
+bincenter 1.950000,bin 20 
+bincenter 3.550000,bin 36 
+bincenter 3.450000,bin 35 
+Lz vs Pt range [0 0.5] GeV/c : Entries 247088.000000, Counter 48911.000000, frazione 0.197950 
+:Lz vs Pt range [0.5 1] GeV/c : Entries 400081.000000, Counter 72473.000000, frazione 0.181146 
+:Lz vs Pt range [1 1.5] GeV/c : Entries 229421.000000, Counter 36071.000000, frazione 0.157226 
+_____________________________________________
+ Lz vs Y range [1.5 2 ] :  frazione di Lz<7 = 0.222679 e media pesata dei valori= 3.344986 
+Lz vs Y range [2 2.5 ] :  frazione di Lz<7 = 0.140565 e media pesata dei valori= 3.389022 
+Lz vs Y range [2.5 3 ] :  frazione di Lz<7 = 0.085270 e media pesata dei valori= 3.465902 
+Lz vs Y range [3 3.5 ] :  frazione di Lz<7 = 0.053711 e media pesata dei valori= 3.475160 
+Lz vs Y range [3.5 4 ] :  frazione di Lz<7 = 0.033008 e media pesata dei valori= 3.529405 
+Lz vs Y range [4 4.5 ] :  frazione di Lz<7 = 0.019987 e media pesata dei valori= 3.433665 
+Valori medi Lz 
+Lz vs Y range [1.5 2] valor medio= 25.254087 
+Lz vs Y range [2 2.5] valor medio= 33.063425 
+Lz vs Y range [2.5 3] valor medio= 39.147370 
+Lz vs Y range [3 3.5] valor medio= 43.273421 
+Lz vs Y range [3.5 4] valor medio= 45.786972 
+Lz vs Y range [4 4.5] valor medio= 47.478507 
+
+
+
+ ***************************************************************************
+ *                         *****TAUOLA LIBRARY: VERSION 2.9 ******         *
+ *                         ***********October 2011 ***************         *
+ *                         **AUTHORS: S.JADACH, Z.WAS*************         *
+ *                         **R. DECKER, M. JEZABEK, J.H.KUEHN*****         *
+ *                         **AVAILABLE FROM: www.cern.ch/wasm****          *
+ *                         ***** PUBLISHED IN COMP. PHYS. COMM.***         *
+ *                         0: Physics initialization  CLEO collab          *
+ *                          see Alain Weinstein www home page:             *
+ *                         http://www.cithep.caltech.edu/~ajw/             *
+ *                         /korb_doc.html#files                            *
+ *                         1: Physics initialization RChL of:              *
+ *                          O. Shekhovtsova, T. Przedzinski,               *
+ *                          P. Roig and Z. Was                             *
+ *                          IFJPAN-2013-5, UAB-FT-731                      *
+ *                         *******CPC 76 (1993) 361          *****         *
+ *                         **5 or more pi dec.: precision limited          *
+ *                         ****DEKAY ROUTINE: INITIALIZATION******         *
+ *                   0     JAK1   = DECAY MODE TAU+                        *
+ *                   0     JAK2   = DECAY MODE TAU-                        *
+ ***************************************************************************
+
+ *                   0     IVER   = hadronic current version           *
+  RANMAR INITIALIZED:   54217137           0         0
+
+ ***************************************************************************
+
+  KORB: rho/rhop -> pi-pi0 mixing:
+  KORB: rho   =  0.769900024      0.151199996    
+  KORB: rhop  =   1.37000000      0.509999990     -0.109999999    
+  KORB: K*/K*prime -> Kpi mixing:
+  KORB: kstp  =   1.70000005      0.234999999      -3.79999988E-02
+  KORB: a1/a1prime -> 3pi, KKpi mixing:
+  KORB: a1    =   1.27499998      0.699999988    
+  KORB: a1prim=   1.46099997      0.250000000       0.00000000    
+  KORB: K1A/K1B -> Kpipi mixing:
+  KORB: K1A   =   1.26999998       9.00000036E-02   1.00000000    
+  KORB: K1B   =   1.40199995      0.173999995      0.800000012    
+  KORB: rho/rhop/rhopp -> 4pi mixing:
+  KORB: rho   =  0.769900024      0.151199996    
+  KORB: rhopp =   1.46500003      0.310000002     -0.109999999    
+  KORB: rhoppp=   1.70000005      0.234999999     -0.109999999    
+  KORB: 3PI-PI0 PARAMS:   0.00000000      0.124200001      0.160400003      0.271100014      0.444299996    
+  KORB: PI-3PI0 PARAMS:   0.00000000       1.00000000    
+  In F3pi: add (rho-pi S-wave) + (rhop-pi S-wave) +
+               (rho-pi D-wave) + (rhop-pi D-wave) +
+    (f2 pi D-wave) + (sigmapi S-wave) + (f0pi S-wave)

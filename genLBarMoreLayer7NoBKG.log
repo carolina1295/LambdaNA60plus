@@ -1,0 +1,282 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  AliReconstructedFirst found in libPWGCFKPAnalysis  is already in libPWGCFK0pAnalysis 
+Warning in <TInterpreter::ReadRootmapFile>: class  AliReconstructedSecond found in libPWGCFKPAnalysis  is already in libPWGCFK0pAnalysis 
+Info in <TUnixSystem::ACLiC>: creating shared library /home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaBarCandidatesmio_C.so
+warning: Please remove the deprecated flag -g
+In file included from /home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaBarCandidatesmio_C_ACLiC_dict.cxx:41:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaBarCandidatesmio.C: In function ‘void GenerateD0SignalCandidates(Int_t, double, const char*, const char*, const char*, int, bool, bool)’:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaBarCandidatesmio.C:304:66: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+  304 |   const Int_t nDim=static_cast<const Int_t>(hsp->GetNdimensions());
+      |                                                                  ^
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaBarCandidatesmio.C: In function ‘void MakeD0CombinBkgCandidates(const char*, Int_t, Int_t)’:
+/home/carolinda/Scaricati/na60plus/na60fastsim/files/macros/runLambdaBarCandidatesmio.C:993:66: warning: type qualifiers ignored on cast result type [-Wignored-qualifiers]
+  993 |   const Int_t nDim=static_cast<const Int_t>(hsp->GetNdimensions());
+      |                                                                  ^
+--> pt and y shape of Lambda from /home/carolinda/Scaricati/PtY_spectra.root
+Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <>
+Info in <TGeoGlobalMagField::Lock>: Global magnetic field <> is now locked
+tutto beneeeeeeee yeeeeeeeeeeeee 
+tutto beneeeeeeee NOTLAMBDAAAAAAA 
+Magnetic Field: Custom0
+No BeamPipe found in the setup ~/Scaricati/na60plus/na60fastsim/files/setup-5um-maps_Eff1.txt
+count 10 
+DefStep: Air 100.000000 Mat: 5.000000 | N.MagField regions: 2
+KMCProbeFwd is initialized with 11 slots
+Attention: overriding last active layer from 10 to 10
+*************************************
+number of magnetic field regions = 2
+*** Field region 0 ***
+Bx = -20.000000 B = 0.000000 Bz = 0.000000 zmin = -2.000000 zmax = 40.000000
+*** Field region 1 ***
+B = 250.000000 Rmin = 30.000000 Rmax = 300.000000 zmin = 380.000000 zmax = 680.000000
+EvtGen:Defining EvtPhotosEngine using photonType = gamma
+EvtGen:Setting up PHOTOS.
+EvtGen:Using EvtGen random number engine also for Photos++
+Message from PHCORK(MODCOR):: initialization
+MODOP=5 -- corrects Energy from mass+flow
+
+********************************************************************************
+
+                            =========================
+                              PHOTOS, Version:  3.56
+                              Released at:  3/5/14
+                            =========================
+
+                     Photos QED corrections in Particle Decays
+
+           Monte Carlo Program - by E. Barberio, B. van Eijk and Z. Was
+           From version 2.09   - by P. Golonka and Z. Was
+           From version 3.00   - by N. Davidson, T. Przedzinski and Z. Was
+********************************************************************************
+
+                  Internal (default) input parameters: 
+
+                    INTERF= 1 ISEC= 0 ITRE= 0 IEXP= 1 IFTOP= 1 IFW= 1
+                    ALPHA_QED= 0x1.de3d3945c2bf2p-8 XPHCUT= 0x1.ad7f29abcaf48p-24
+
+                    Option with interference is active
+                    Option with exponentiation is active EPSEXP=0x1.a36e2eb1c432dp-14
+                    Emision in t tbar production is active
+                    Correction wt in decay of W is active
+
+          WARNING:  /HEPEVT/ is not anymore used.
+
+********************************************************************************
+MODOP=2 -- blocks emission in Kl  to gamma e+e-: DEFAULT
+MODOP=2 -- blocks emission in pi0 to gamma e+e-: DEFAULT
+ IPHQRK_setQarknoEmission MODOP=1 -- blocks emission from light quarks:  DEFAULT
+Message from PHCORK(MODCOR):: initialization
+MODOP=5 -- corrects Energy from mass+flow
+EvtGen:Defining EvtPythiaEngine: data tables defined in 
+EvtGen:Pythia 6 codes in decay files will be converted to Pythia 8 codes
+EvtGen:Using EvtGen random engine for Pythia 8 as well
+EvtGen:Creating generic Pythia generator
+
+ PYTHIA Error: settings file /Index.xml not found
+ PYTHIA Abort from Pythia::Pythia: settings unavailable  
+EvtGen:Creating alias Pythia generator
+
+ PYTHIA Error: settings file /Index.xml not found
+ PYTHIA Abort from Pythia::Pythia: settings unavailable  
+EvtGen:Defining EvtTauolaEngine.
+EvtGen:Setting up TAUOLA.
+EvtGen:Using EvtGen random number engine also for Tauola++
+
+ *************************************
+ *     TAUOLA C++ Interface v1.1.4   *
+ *-----------------------------------*
+ *                                   *
+ *   (c) Nadia    Davidson,   (1,2)  *
+ *       Gizo     Nanava,     (3)    *
+ *       Tomasz   Przedzinski,(4)    *
+ *       Elzbieta Richter-Was,(2,4)  *
+ *       Zbigniew Was         (2,5)  *
+ *                                   *
+ *  1) Unimelb, Melbourne, Australia *
+ *  2)     INP, Krakow, Poland       *
+ *  3) University Bonn, Germany      *
+ *  4)      UJ, Krakow, Poland       *
+ *  5)    CERN, Geneva, Switzerland  *
+ *************************************
+Reading SANC input files.
+File 'table1-1.txt'  missing... skipped.
+File 'table2-2.txt'  missing... skipped.
+File 'table11-11.txt' missing... skipped.
+
+EvtGen:Initializing EvtGen
+EvtGen:Storing known decay models
+EvtGen:Defining EvtBcToNPi model: Bc -> V + npi and Bc -> P + npi decays
+from A.V. Berezhnoy, A.K. Likhoded, A.V. Luchinsky: Phys.Rev.D 82, 014012 (2010) and arXiV:1104.0808.
+EvtGen:Main decay file name  :/home/carolinda/alice/sw/ubuntu2004_x86-64/AliRoot/master-1/TEvtGen/EvtGen/DECAY.DEC
+EvtGen:PDT table file name   :/home/carolinda/alice/sw/ubuntu2004_x86-64/AliRoot/master-1/TEvtGen/EvtGen/evt.pdl
+EvtGen:In readDecayFile, reading:/home/carolinda/alice/sw/ubuntu2004_x86-64/AliRoot/master-1/TEvtGen/EvtGen/DECAY.DEC
+EvtGen:Warning, sum of branching fractions for omega is 0.993689
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for phi is 0.998736
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for f_2 is 0.999016
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for chi_c1 is 0.995996
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for Upsilon(2S) is 0.9921
+EvtGen:rescaled to one! 
+EvtGen:Warning, sum of branching fractions for Upsilon(3S) is 0.99911
+EvtGen:rescaled to one! 
+EvtGen:Mixing type integer set to 1
+EvtGen:Done initializing EvtGen
+-rw-rw-r-- 1 carolinda carolinda 65 nov 20 06:19 /home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:In readDecayFile, reading:/home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:Redefined decay of Lambda0
+-- Use  decay table from file /home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:In readDecayFile, reading:/home/carolinda/Scaricati/na60plus/na60fastsim/files/decaytables/USERTABLAM.DEC
+EvtGen:Redefined decay of Lambda0
+ ***************  ev = 0 
+ ***************  ev = 10000 
+ ***************  ev = 20000 
+ ***************  ev = 30000 
+ ***************  ev = 40000 
+ ***************  ev = 50000 
+ ***************  ev = 60000 
+ ***************  ev = 70000 
+ ***************  ev = 80000 
+ ***************  ev = 90000 
+ ***************  ev = 100000 
+ ***************  ev = 110000 
+ ***************  ev = 120000 
+ ***************  ev = 130000 
+ ***************  ev = 140000 
+ ***************  ev = 150000 
+ ***************  ev = 160000 
+ ***************  ev = 170000 
+ ***************  ev = 180000 
+ ***************  ev = 190000 
+ ***************  ev = 200000 
+ ***************  ev = 210000 
+ ***************  ev = 220000 
+ ***************  ev = 230000 
+ ***************  ev = 240000 
+ ***************  ev = 250000 
+ ***************  ev = 260000 
+ ***************  ev = 270000 
+ ***************  ev = 280000 
+ ***************  ev = 290000 
+ ***************  ev = 300000 
+ ***************  ev = 310000 
+ ***************  ev = 320000 
+ ***************  ev = 330000 
+ ***************  ev = 340000 
+ ***************  ev = 350000 
+ ***************  ev = 360000 
+ ***************  ev = 370000 
+ ***************  ev = 380000 
+ ***************  ev = 390000 
+ ***************  ev = 400000 
+ ***************  ev = 410000 
+ ***************  ev = 420000 
+ ***************  ev = 430000 
+ ***************  ev = 440000 
+ ***************  ev = 450000 
+ ***************  ev = 460000 
+ ***************  ev = 470000 
+ ***************  ev = 480000 
+ ***************  ev = 490000 
+ ***************  ev = 500000 
+ ***************  ev = 510000 
+ ***************  ev = 520000 
+ ***************  ev = 530000 
+ ***************  ev = 540000 
+ ***************  ev = 550000 
+ ***************  ev = 560000 
+ ***************  ev = 570000 
+ ***************  ev = 580000 
+ ***************  ev = 590000 
+ ***************  ev = 600000 
+ ***************  ev = 610000 
+ ***************  ev = 620000 
+ ***************  ev = 630000 
+ ***************  ev = 640000 
+ ***************  ev = 650000 
+ ***************  ev = 660000 
+ ***************  ev = 670000 
+ ***************  ev = 680000 
+ ***************  ev = 690000 
+ ***************  ev = 700000 
+ ***************  ev = 710000 
+ ***************  ev = 720000 
+ ***************  ev = 730000 
+ ***************  ev = 740000 
+ ***************  ev = 750000 
+ ***************  ev = 760000 
+ ***************  ev = 770000 
+ ***************  ev = 780000 
+ ***************  ev = 790000 
+ ***************  ev = 800000 
+ ***************  ev = 810000 
+ ***************  ev = 820000 
+ ***************  ev = 830000 
+ ***************  ev = 840000 
+ ***************  ev = 850000 
+ ***************  ev = 860000 
+ ***************  ev = 870000 
+ ***************  ev = 880000 
+ ***************  ev = 890000 
+ ***************  ev = 900000 
+ ***************  ev = 910000 
+ ***************  ev = 920000 
+ ***************  ev = 930000 
+ ***************  ev = 940000 
+ ***************  ev = 950000 
+ ***************  ev = 960000 
+ ***************  ev = 970000 
+ ***************  ev = 980000 
+ ***************  ev = 990000 
+I-TCanvas::MakeDefCanvas:  created default TCanvas with name c1
+
+
+
+ ***************************************************************************
+ *                         *****TAUOLA LIBRARY: VERSION 2.9 ******         *
+ *                         ***********October 2011 ***************         *
+ *                         **AUTHORS: S.JADACH, Z.WAS*************         *
+ *                         **R. DECKER, M. JEZABEK, J.H.KUEHN*****         *
+ *                         **AVAILABLE FROM: www.cern.ch/wasm****          *
+ *                         ***** PUBLISHED IN COMP. PHYS. COMM.***         *
+ *                         0: Physics initialization  CLEO collab          *
+ *                          see Alain Weinstein www home page:             *
+ *                         http://www.cithep.caltech.edu/~ajw/             *
+ *                         /korb_doc.html#files                            *
+ *                         1: Physics initialization RChL of:              *
+ *                          O. Shekhovtsova, T. Przedzinski,               *
+ *                          P. Roig and Z. Was                             *
+ *                          IFJPAN-2013-5, UAB-FT-731                      *
+ *                         *******CPC 76 (1993) 361          *****         *
+ *                         **5 or more pi dec.: precision limited          *
+ *                         ****DEKAY ROUTINE: INITIALIZATION******         *
+ *                   0     JAK1   = DECAY MODE TAU+                        *
+ *                   0     JAK2   = DECAY MODE TAU-                        *
+ ***************************************************************************
+
+ *                   0     IVER   = hadronic current version           *
+  RANMAR INITIALIZED:   54217137           0         0
+
+ ***************************************************************************
+
+  KORB: rho/rhop -> pi-pi0 mixing:
+  KORB: rho   =  0.769900024      0.151199996    
+  KORB: rhop  =   1.37000000      0.509999990     -0.109999999    
+  KORB: K*/K*prime -> Kpi mixing:
+  KORB: kstp  =   1.70000005      0.234999999      -3.79999988E-02
+  KORB: a1/a1prime -> 3pi, KKpi mixing:
+  KORB: a1    =   1.27499998      0.699999988    
+  KORB: a1prim=   1.46099997      0.250000000       0.00000000    
+  KORB: K1A/K1B -> Kpipi mixing:
+  KORB: K1A   =   1.26999998       9.00000036E-02   1.00000000    
+  KORB: K1B   =   1.40199995      0.173999995      0.800000012    
+  KORB: rho/rhop/rhopp -> 4pi mixing:
+  KORB: rho   =  0.769900024      0.151199996    
+  KORB: rhopp =   1.46500003      0.310000002     -0.109999999    
+  KORB: rhoppp=   1.70000005      0.234999999     -0.109999999    
+  KORB: 3PI-PI0 PARAMS:   0.00000000      0.124200001      0.160400003      0.271100014      0.444299996    
+  KORB: PI-3PI0 PARAMS:   0.00000000       1.00000000    
+  In F3pi: add (rho-pi S-wave) + (rhop-pi S-wave) +
+               (rho-pi D-wave) + (rhop-pi D-wave) +
+    (f2 pi D-wave) + (sigmapi S-wave) + (f0pi S-wave)

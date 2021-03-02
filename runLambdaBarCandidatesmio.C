@@ -107,7 +107,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   }*/
  
 //Lambda Bar
-	TFile *fntupla = new TFile("ntuplaLambdaBarMoreLayerconBKG.root", "recreate");
+	TFile *fntupla = new TFile("ntuplaLambdaBarstandNoBKG.root", "recreate");
 	float variable[31];
 	TNtuple *nt = new TNtuple("ntLambdaBarstand","Variablesforperformance","nfaketrkprot:nfaketrkpion:ygen:xP:yP:zP:Vxgen:Vygen:Vzgen:massinvrec:pxgenprot:pygenprot:pzgenprot:pxgenpion:pygenpion:pzgenpion:dca:chi2prot:chi2ITSprot:chi2pion:chi2ITSpion:pxrecprot:pyrecprot:pzrecprot:pxrecpion:pyrecpion:pzrecpion:massinvswitch:pxlambda:pylambda:pzlambda");
 	
@@ -121,7 +121,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
   TH2F *hyPiP = new TH2F("hyPiP", "y pions vs y Protons from Lambda decays", 50, 0., 5., 50, 0., 5.);
   
   
-  TFile *fout = new TFile("LambdaBarMoreLayerconBKG-Signal-histos.root", "recreate");
+  TFile *fout = new TFile("LambdaBarstandNoBKG-Signal-histos.root", "recreate");
   
   
   //int outN = nev/10;
@@ -130,7 +130,7 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
 //_____________________________SETUP SPERIMENTALE
   KMCDetectorFwd *det = new KMCDetectorFwd();
   det->ReadSetup(setup, setup);
-  det->InitBkg(Eint); //check modificare bkg su altro file
+  //det->InitBkg(Eint); //check modificare bkg su altro file
   det->ForceLastActiveLayer(det->GetLastActiveLayerITS()); // will not propagate beyond VT
   det->SetMinITSHits(7);
   //det->SetMinITSHits(det->GetNumberOfActiveLayersITS()); //NA60+

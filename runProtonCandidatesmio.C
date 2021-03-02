@@ -284,29 +284,29 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
     }
   Float_t arrnt[11];
   	Double_t vprim[3];
-  for(int i=0;i<30;i++){
+  //for(int i=0;i<30;i++){
     	float nfaketrk = 0, nfaketrkprot = 0, nfaketrkpion = 0;
 	  int count=0;
     double countrec=0;
      vprim[0] = 1;
      vprim[1] = 1; 
-     vprim[2] = 7+i;
+     vprim[2] = 10;
    
-	//GENERAZIONE
+	  //GENERAZIONE
     for (Int_t iev = 0; iev < nevents; iev++){
       hNevents->Fill(0.5);
       //Double_t vprim[3] = {1, 1, 8};//vertice primario
       if(iev%10000==0) printf(" ***************  ev = %d \n", iev);
       int nrec = 0;
       int nfake = 0;
-        nfaketrk = 0;
-        nfaketrkprot = 0;
-        nfaketrkpion = 0;
+      nfaketrk = 0;
+      nfaketrkprot = 0;
+      nfaketrkpion = 0;
       double pxyz[3], pProtRec[3], pPionRec[3], pProtGen[3], pPionGen[3];
       
       if (simulateBg && (iev%refreshBg)==0) det->GenBgEvent(0.,0.,0.);//bkg c'è sempre
-      Double_t ptGenD = hLambdapt->GetRandom(); // get Lambda distribution from file
-      Double_t yGenD = hLambday->GetRandom();
+      Double_t ptGenD = 0.5; // get Lambda distribution from file
+      Double_t yGenD = 3;
       Double_t phi = gRandom->Rndm() * 2 * TMath::Pi();
       Double_t pxGenD = ptGenD * TMath::Cos(phi);
       Double_t pyGenD = ptGenD * TMath::Sin(phi);
@@ -348,17 +348,26 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
       if (det->SolveSingleTrack(pDecDau->Pt(), pDecDau->Rapidity(), pDecDau->Phi(), mass, crg, vprim[0], vprim[1], vprim[2], 0, 1, 99)){
         KMCProbeFwd *trw = det->GetLayer(0)->GetWinnerMCTrack();
         if (trw){
+          //print getwinnermc e chi2
           if (trw->GetNormChi2(kTRUE) < ChiTot){
             nrec++;
             nfake += trw->GetNFakeITSHits();
             trw->GetPXYZ(pxyz);
             nfaketrk = trw->GetNFakeITSHits();
+            printf("evento %d Macro: numhits %d, num fake %f \n",iev,trw->GetNITSHits(),nfaketrk);
+						printf("Macro: getInnerLayerCheck %d \n",trw->GetInnerLayerChecked());
+            printf("Bit patt :");
+            for(unsigned int mask = 0x80000000; mask; mask >>= 1){
+            printf("%d", !!(mask & trw->GetHitsPatt()));
+            }
+            printf("\n");
             /*printf("pxrec %f pxgen %f \n", pxyz[0],pxGenD);
             printf("pyrec %f pygen %f \n", pxyz[1],pyGenD);
             printf("pzrec %f pzgen %f \n", pxyz[2],pzGenD);*/
             daugen[0].SetXYZM(pxGenD, pyGenD, pzGenD, mass);
             daurec[0].SetXYZM(pxyz[0], pxyz[1], pxyz[2], mass);
             recProbe[0] = *trw; 
+            //printf("z %f \n",recProbe[0].GetX());
             hPrecXprot->Fill(pxyz[0]);
             hPrecYprot->Fill(pxyz[1]);
             hPrecZprot->Fill(pxyz[2]);	
@@ -382,10 +391,10 @@ void GenerateD0SignalCandidates(Int_t nevents = 100000,
       }
     } //event loop
 
-    hEfficiency->Fill(7+i,countrec/nevents);
+    hEfficiency->Fill(25,countrec/nevents);
     hEfficiency->SetMarkerStyle(20);
     hEfficiency->SetLineColor(kBlue);
-  }
+  //}
   /*hMassAll->SetLineColor(kBlue);
   hMassAll->Draw();
   hMassAll->SetMinimum(0.1);
