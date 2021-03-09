@@ -42,10 +42,10 @@ void EfficiencyLambda(){
 	TFile *fLambdaBarMoreLayer7NoBKG = new TFile("LambdaBarMoreLayer7NoBKG-Signal-histos.root");
 	TFile *fLambdaMoreLayer10NoBKG = new TFile("LambdaMoreLayer10NoBKG-Signal-histos.root");
 	TFile *fLambdaBarMoreLayer10NoBKG = new TFile("LambdaBarMoreLayer10NoBKG-Signal-histos.root");
-	TFile *fPion = new TFile("PION-Signal-histos.root");
+	/*TFile *fPion = new TFile("PION-Signal-histos.root");
 	TFile *fPionpos = new TFile("PIONpos-Signal-histos.root");
 	TFile *fProt = new TFile("PROTON-Signal-histos.root");
-	TFile *fAntiProt = new TFile("AntiPROTON-Signal-histos.root");
+	TFile *fAntiProt = new TFile("AntiPROTON-Signal-histos.root");*/
 	TFile *fD0 = new TFile("D0senzaBKG-Signal-histos.root");
 	TFile *fD0MoreLayer = new TFile("D0MoreLayer-Signal-histos.root");
 
@@ -304,7 +304,7 @@ void EfficiencyLambda(){
 		}
 	}
 
-	TH1F* hPtGenD0=(TH1F*)fD0->Get("hPtGen");
+/*	TH1F* hPtGenD0=(TH1F*)fD0->Get("hPtGen");
    	TH1F* hPtRecoAllD0=(TH1F*)fD0->Get("hPtRecoAll");
   	TH1F* hPtGenRecoAllD0=(TH1F*)fD0->Get("hPtGenRecoAll");
 	TH1F* hPtGenMLD0=(TH1F*)fD0MoreLayer->Get("hPtGen");
@@ -346,7 +346,7 @@ void EfficiencyLambda(){
 		effD0[i]->Draw();
 		effD010lay[i]->Draw("SAME");
 	}	
-
+*/
 	TCanvas *effLambda = new TCanvas("effLambda");
 	TCanvas *effLambdaBar = new TCanvas("effLambdaBar");
 	TCanvas *effLambda0fake = new TCanvas("effLambda0fake");
